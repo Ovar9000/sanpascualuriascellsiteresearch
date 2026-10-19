@@ -1,0 +1,615 @@
+{
+ "bolod": {
+  "name": "Bolod hill (existing)",
+  "lat": 13.125,
+  "lon": 122.9886,
+  "agl": 40.0,
+  "ground": 107.96000000001914
+ },
+ "population_total_2020": 44449,
+ "served_today": 8428,
+ "unserved_today": 36021,
+ "contractor": [
+  {
+   "id": "CT-1",
+   "name": "Contractor scenario 1 (road, 1.0 km S of towers)",
+   "lat": 13.1158,
+   "lon": 122.9892,
+   "ground": 60.431999999980164,
+   "agl": 40.0,
+   "new_pop_outdoor": 5739,
+   "new_pop_indoor": 2213,
+   "served_land_km2": 75.0,
+   "new_land_km2": 4.2,
+   "overlap_with_bolod": 0.944,
+   "dist_bolod_km": 1.03,
+   "sensitivity": {
+    "30": 4670,
+    "45": 6168,
+    "60": 7228
+   },
+   "ground_below_bolod_m": 48.0,
+   "beyond_bolod": 22,
+   "beyond_bolod_indoor": 0,
+   "total_with_bolod": 14167,
+   "mw": {
+    "dist_km": 1.0262076925290182,
+    "min_f1": 14.513214987420946,
+    "obs_km": 0.8451122173768385,
+    "obs_ground": 73.75371072658939
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.87,
+    "Terraplin": 0.74,
+    "Nazareno": 0.53,
+    "Busing": 0.9,
+    "Boca Chica": 0.54,
+    "San Rafael": 0.1,
+    "Santa Cruz": 0.41,
+    "Mabuhay": 0.01,
+    "San Pedro": 0.01,
+    "Mabini": 0.0,
+    "Ki-Romero": 0.0,
+    "Malaking Ilog": 0.0,
+    "Mapanique": 0.0,
+    "San Jose": 0.0,
+    "Ki-Buaya": 0.0,
+    "Quintina": 0.0,
+    "Halabangbaybay": 0.0,
+    "Dangcalan": 0.08,
+    "Cueva": 0.44,
+    "Pinamasingan": 0.11,
+    "Laurente": 0.04,
+    "Iniwaran": 0.61
+   }
+  },
+  {
+   "id": "CT-2",
+   "name": "Contractor scenario 2 (road, 1.7 km S of towers)",
+   "lat": 13.11,
+   "lon": 122.9908,
+   "ground": 62.00000000000255,
+   "agl": 40.0,
+   "new_pop_outdoor": 4925,
+   "new_pop_indoor": 1559,
+   "served_land_km2": 74.9,
+   "new_land_km2": 6.7,
+   "overlap_with_bolod": 0.911,
+   "dist_bolod_km": 1.69,
+   "sensitivity": {
+    "30": 4298,
+    "45": 5445,
+    "60": 6879
+   },
+   "ground_below_bolod_m": 46.0,
+   "beyond_bolod": 0,
+   "beyond_bolod_indoor": 0,
+   "total_with_bolod": 13353,
+   "mw": {
+    "dist_km": 1.6867485879581294,
+    "min_f1": 11.655653371922837,
+    "obs_km": 1.1144588884723354,
+    "obs_ground": 75.51428571429778
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.87,
+    "Terraplin": 0.7,
+    "Nazareno": 0.54,
+    "Busing": 0.82,
+    "Boca Chica": 0.49,
+    "San Rafael": 0.22,
+    "Santa Cruz": 0.36,
+    "Mabuhay": 0.0,
+    "San Pedro": 0.01,
+    "Mabini": 0.0,
+    "Ki-Romero": 0.0,
+    "Malaking Ilog": 0.0,
+    "Mapanique": 0.0,
+    "San Jose": 0.0,
+    "Ki-Buaya": 0.0,
+    "Quintina": 0.0,
+    "Halabangbaybay": 0.0,
+    "Dangcalan": 0.04,
+    "Cueva": 0.26,
+    "Pinamasingan": 0.04,
+    "Laurente": 0.01,
+    "Iniwaran": 0.54
+   }
+  },
+  {
+   "id": "CT-3",
+   "name": "Contractor scenario 3 (road, 2.1 km S of towers)",
+   "lat": 13.1067,
+   "lon": 122.9933,
+   "ground": 72.77440000003354,
+   "agl": 40.0,
+   "new_pop_outdoor": 5134,
+   "new_pop_indoor": 1655,
+   "served_land_km2": 87.0,
+   "new_land_km2": 14.0,
+   "overlap_with_bolod": 0.84,
+   "dist_bolod_km": 2.1,
+   "sensitivity": {
+    "30": 4101,
+    "45": 5835,
+    "60": 7117
+   },
+   "ground_below_bolod_m": 35.0,
+   "beyond_bolod": 43,
+   "beyond_bolod_indoor": 0,
+   "total_with_bolod": 13562,
+   "mw": {
+    "dist_km": 2.0999169435598106,
+    "min_f1": 10.364002699717282,
+    "obs_km": 1.5216789446085583,
+    "obs_ground": 82.41935727797959
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.84,
+    "Terraplin": 0.68,
+    "Nazareno": 0.57,
+    "Busing": 0.82,
+    "Boca Chica": 0.51,
+    "San Rafael": 0.21,
+    "Santa Cruz": 0.41,
+    "Mabuhay": 0.01,
+    "San Pedro": 0.0,
+    "Mabini": 0.0,
+    "Ki-Romero": 0.0,
+    "Malaking Ilog": 0.0,
+    "Mapanique": 0.0,
+    "San Jose": 0.0,
+    "Ki-Buaya": 0.0,
+    "Quintina": 0.0,
+    "Halabangbaybay": 0.0,
+    "Dangcalan": 0.22,
+    "Cueva": 0.18,
+    "Pinamasingan": 0.25,
+    "Laurente": 0.0,
+    "Iniwaran": 0.41
+   }
+  }
+ ],
+ "alternatives": [
+  {
+   "id": "ALT-A",
+   "name": "Pinamasingan ridge (same Poblacion-Pinamasingan road, further out)",
+   "lat": 13.08722,
+   "lon": 123.03167,
+   "ground": 123.0,
+   "agl": 40.0,
+   "new_pop_outdoor": 11497,
+   "new_pop_indoor": 6035,
+   "served_land_km2": 113.3,
+   "new_land_km2": 62.4,
+   "overlap_with_bolod": 0.449,
+   "dist_bolod_km": 6.28,
+   "road_m": 723.8903294860321,
+   "mw_mast_m": 40,
+   "mw_7ghz_mast": 40,
+   "beyond_bolod": 7531,
+   "beyond_bolod_indoor": 5153,
+   "near": "Pinamasingan",
+   "bearing": 132.0,
+   "mw": {
+    "dist_km": 6.2843781226940045,
+    "min_f1": 0.9737661320667202,
+    "obs_km": 3.8788745350599356,
+    "obs_ground": 141.34016007701382
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.12,
+    "Terraplin": 0.03,
+    "Nazareno": 0.26,
+    "Busing": 0.17,
+    "Boca Chica": 0.22,
+    "San Rafael": 0.14,
+    "Santa Cruz": 0.07,
+    "Mabuhay": 0.0,
+    "San Pedro": 0.93,
+    "Mabini": 0.41,
+    "Ki-Romero": 0.0,
+    "Malaking Ilog": 0.0,
+    "Mapanique": 0.54,
+    "San Jose": 0.0,
+    "Ki-Buaya": 0.0,
+    "Quintina": 0.0,
+    "Halabangbaybay": 0.0,
+    "Dangcalan": 0.44,
+    "Cueva": 0.81,
+    "Pinamasingan": 1.0,
+    "Laurente": 0.21,
+    "Iniwaran": 0.0
+   }
+  },
+  {
+   "id": "ALT-B",
+   "name": "Malaking Ilog ridge (inland Pinamasingan-San Pedro-Mapanique road)",
+   "lat": 13.0075,
+   "lon": 123.05556,
+   "ground": 153.0,
+   "agl": 40.0,
+   "new_pop_outdoor": 12174,
+   "new_pop_indoor": 10208,
+   "served_land_km2": 110.6,
+   "new_land_km2": 97.3,
+   "overlap_with_bolod": 0.12,
+   "dist_bolod_km": 14.96,
+   "road_m": 985.2523174921596,
+   "mw_mast_m": 35,
+   "mw_7ghz_mast": 40,
+   "beyond_bolod": 11622,
+   "beyond_bolod_indoor": 10046,
+   "near": "Malaking Ilog",
+   "bearing": 151.0,
+   "mw": {
+    "dist_km": 14.960317924420984,
+    "min_f1": 0.7028885259232137,
+    "obs_km": 13.30807397694477,
+    "obs_ground": 167.73687443750256
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.0,
+    "Terraplin": 0.0,
+    "Nazareno": 0.0,
+    "Busing": 0.0,
+    "Boca Chica": 0.0,
+    "San Rafael": 0.0,
+    "Santa Cruz": 0.0,
+    "Mabuhay": 0.0,
+    "San Pedro": 0.99,
+    "Mabini": 0.53,
+    "Ki-Romero": 0.93,
+    "Malaking Ilog": 1.0,
+    "Mapanique": 1.0,
+    "San Jose": 0.81,
+    "Ki-Buaya": 0.74,
+    "Quintina": 0.07,
+    "Halabangbaybay": 0.06,
+    "Dangcalan": 0.5,
+    "Cueva": 0.0,
+    "Pinamasingan": 0.04,
+    "Laurente": 0.0,
+    "Iniwaran": 0.0
+   }
+  },
+  {
+   "id": "ALT-C",
+   "name": "Cueva ridge (north-coast road via Laurente)",
+   "lat": 13.10167,
+   "lon": 123.05778,
+   "ground": 62.0,
+   "agl": 40.0,
+   "new_pop_outdoor": 9285,
+   "new_pop_indoor": 6313,
+   "served_land_km2": 84.4,
+   "new_land_km2": 48.4,
+   "overlap_with_bolod": 0.426,
+   "dist_bolod_km": 7.94,
+   "road_m": 409.99370264019706,
+   "mw_mast_m": 35,
+   "mw_7ghz_mast": 35,
+   "beyond_bolod": 5444,
+   "beyond_bolod_indoor": 4933,
+   "near": "Cueva",
+   "bearing": 109.0,
+   "mw": {
+    "dist_km": 7.937213677027875,
+    "min_f1": 1.2281096282960517,
+    "obs_km": 2.375151062443948,
+    "obs_ground": 111.33992642149752
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.0,
+    "Terraplin": 0.0,
+    "Nazareno": 0.13,
+    "Busing": 0.0,
+    "Boca Chica": 0.0,
+    "San Rafael": 0.0,
+    "Santa Cruz": 0.0,
+    "Mabuhay": 0.0,
+    "San Pedro": 0.75,
+    "Mabini": 0.0,
+    "Ki-Romero": 0.0,
+    "Malaking Ilog": 0.0,
+    "Mapanique": 0.14,
+    "San Jose": 0.0,
+    "Ki-Buaya": 0.0,
+    "Quintina": 0.0,
+    "Halabangbaybay": 0.01,
+    "Dangcalan": 0.43,
+    "Cueva": 0.99,
+    "Pinamasingan": 0.72,
+    "Laurente": 0.63,
+    "Iniwaran": 0.0
+   }
+  },
+  {
+   "id": "ALT-D",
+   "name": "Santa Cruz ridge (west-coast road via San Rafael)",
+   "lat": 13.06361,
+   "lon": 122.97167,
+   "ground": 140.0,
+   "agl": 40.0,
+   "new_pop_outdoor": 11147,
+   "new_pop_indoor": 7137,
+   "served_land_km2": 93.0,
+   "new_land_km2": 38.9,
+   "overlap_with_bolod": 0.582,
+   "dist_bolod_km": 7.08,
+   "road_m": 565.9141250040602,
+   "mw_mast_m": 15,
+   "mw_7ghz_mast": 15,
+   "beyond_bolod": 6555,
+   "beyond_bolod_indoor": 4982,
+   "near": "Santa Cruz",
+   "bearing": 195.0,
+   "mw": {
+    "dist_km": 7.07617505752736,
+    "min_f1": 1.3598352837384573,
+    "obs_km": 4.516707483528103,
+    "obs_ground": 124.93740226346796
+   },
+   "per_barangay_outdoor": {
+    "Bolod (Poblacion)": 0.91,
+    "Terraplin": 0.87,
+    "Nazareno": 0.34,
+    "Busing": 0.3,
+    "Boca Chica": 0.59,
+    "San Rafael": 0.81,
+    "Santa Cruz": 0.96,
+    "Mabuhay": 0.65,
+    "San Pedro": 0.84,
+    "Mabini": 0.0,
+    "Ki-Romero": 0.0,
+    "Malaking Ilog": 0.0,
+    "Mapanique": 0.2,
+    "San Jose": 0.0,
+    "Ki-Buaya": 0.0,
+    "Quintina": 0.0,
+    "Halabangbaybay": 0.0,
+    "Dangcalan": 0.0,
+    "Cueva": 0.0,
+    "Pinamasingan": 0.06,
+    "Laurente": 0.0,
+    "Iniwaran": 0.4
+   }
+  }
+ ],
+ "packages": [
+  {
+   "sites": [
+    "ALT-B"
+   ],
+   "total_outdoor": 20602,
+   "new_outdoor": 12174,
+   "beyond_bolod": 11622
+  },
+  {
+   "sites": [
+    "ALT-A"
+   ],
+   "total_outdoor": 19925,
+   "new_outdoor": 11497,
+   "beyond_bolod": 7531
+  },
+  {
+   "sites": [
+    "ALT-D"
+   ],
+   "total_outdoor": 19575,
+   "new_outdoor": 11147,
+   "beyond_bolod": 6555
+  },
+  {
+   "sites": [
+    "ALT-C"
+   ],
+   "total_outdoor": 17713,
+   "new_outdoor": 9285,
+   "beyond_bolod": 5444
+  },
+  {
+   "sites": [
+    "ALT-B",
+    "ALT-D"
+   ],
+   "total_outdoor": 28557,
+   "new_outdoor": 20129,
+   "beyond_bolod": 15268
+  },
+  {
+   "sites": [
+    "ALT-A",
+    "ALT-D"
+   ],
+   "total_outdoor": 26634,
+   "new_outdoor": 18206,
+   "beyond_bolod": 11177
+  },
+  {
+   "sites": [
+    "ALT-A",
+    "ALT-B"
+   ],
+   "total_outdoor": 26580,
+   "new_outdoor": 18152,
+   "beyond_bolod": 14186
+  },
+  {
+   "sites": [
+    "ALT-B",
+    "ALT-C"
+   ],
+   "total_outdoor": 26484,
+   "new_outdoor": 18056,
+   "beyond_bolod": 14214
+  },
+  {
+   "sites": [
+    "ALT-C",
+    "ALT-D"
+   ],
+   "total_outdoor": 26034,
+   "new_outdoor": 17606,
+   "beyond_bolod": 9501
+  },
+  {
+   "sites": [
+    "ALT-A",
+    "ALT-C"
+   ],
+   "total_outdoor": 21592,
+   "new_outdoor": 13164,
+   "beyond_bolod": 8121
+  },
+  {
+   "sites": [
+    "ALT-B",
+    "ALT-C",
+    "ALT-D"
+   ],
+   "total_outdoor": 34394,
+   "new_outdoor": 25966,
+   "beyond_bolod": 17861
+  },
+  {
+   "sites": [
+    "ALT-A",
+    "ALT-B",
+    "ALT-D"
+   ],
+   "total_outdoor": 33289,
+   "new_outdoor": 24861,
+   "beyond_bolod": 17832
+  },
+  {
+   "sites": [
+    "ALT-A",
+    "ALT-C",
+    "ALT-D"
+   ],
+   "total_outdoor": 28301,
+   "new_outdoor": 19873,
+   "beyond_bolod": 11767
+  },
+  {
+   "sites": [
+    "ALT-A",
+    "ALT-B",
+    "ALT-C"
+   ],
+   "total_outdoor": 28238,
+   "new_outdoor": 19810,
+   "beyond_bolod": 14766
+  }
+ ],
+ "best_package": {
+  "1": {
+   "sites": [
+    "ALT-B"
+   ],
+   "total_outdoor": 20602,
+   "new_outdoor": 12174,
+   "beyond_bolod": 11622
+  },
+  "2": {
+   "sites": [
+    "ALT-B",
+    "ALT-D"
+   ],
+   "total_outdoor": 28557,
+   "new_outdoor": 20129,
+   "beyond_bolod": 15268
+  },
+  "3": {
+   "sites": [
+    "ALT-B",
+    "ALT-C",
+    "ALT-D"
+   ],
+   "total_outdoor": 34394,
+   "new_outdoor": 25966,
+   "beyond_bolod": 17861
+  }
+ },
+ "profiles": {
+  "San Pedro": {
+   "ALT-A": {
+    "blocked": true,
+    "km": 4.9
+   },
+   "ALT-B": {
+    "blocked": false,
+    "km": 8.2
+   },
+   "ALT-C": {
+    "blocked": true,
+    "km": 8.1
+   },
+   "ALT-D": {
+    "blocked": false,
+    "km": 3.1
+   },
+   "contractor_blocked": true
+  },
+  "Pinamasingan": {
+   "ALT-A": {
+    "blocked": false,
+    "km": 1.0
+   },
+   "ALT-B": {
+    "blocked": true,
+    "km": 10.1
+   },
+   "ALT-C": {
+    "blocked": true,
+    "km": 3.8
+   },
+   "ALT-D": {
+    "blocked": true,
+    "km": 6.5
+   },
+   "contractor_blocked": true
+  },
+  "Mapanique": {
+   "ALT-A": {
+    "blocked": true,
+    "km": 6.2
+   },
+   "ALT-B": {
+    "blocked": false,
+    "km": 3.7
+   },
+   "ALT-C": {
+    "blocked": true,
+    "km": 6.9
+   },
+   "ALT-D": {
+    "blocked": false,
+    "km": 10.2
+   },
+   "contractor_blocked": true
+  },
+  "Ki-Romero": {
+   "ALT-A": {
+    "blocked": true,
+    "km": 8.9
+   },
+   "ALT-B": {
+    "blocked": false,
+    "km": 3.5
+   },
+   "ALT-C": {
+    "blocked": true,
+    "km": 11.1
+   },
+   "ALT-D": {
+    "blocked": true,
+    "km": 8.4
+   },
+   "contractor_blocked": true
+  }
+ },
+ "pool_size": 71
+}

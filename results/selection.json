@@ -1,0 +1,1751 @@
+{
+ "assumptions": {
+  "band_MHz": 758.0,
+  "eirp_per_RE_dBm": 33.7,
+  "clutter_dB": 10.0,
+  "rsrp_outdoor_dBm": -110.0,
+  "rsrp_indoor_dBm": -100.0,
+  "max_land_km": 10.0,
+  "mast_agl_m": 40.0,
+  "mw_GHz": 15.0
+ },
+ "bolod": {
+  "name": "Bolod hill (existing)",
+  "lat": 13.125,
+  "lon": 122.9886,
+  "agl": 40.0,
+  "per_barangay": {
+   "Bolod (Poblacion)": [
+    0.97,
+    0.9
+   ],
+   "Terraplin": [
+    0.98,
+    0.82
+   ],
+   "Nazareno": [
+    0.84,
+    0.66
+   ],
+   "Busing": [
+    0.96,
+    0.85
+   ],
+   "Boca Chica": [
+    0.71,
+    0.51
+   ],
+   "San Rafael": [
+    0.22,
+    0.07
+   ],
+   "Santa Cruz": [
+    0.49,
+    0.33
+   ],
+   "Mabuhay": [
+    0.03,
+    0.01
+   ],
+   "San Pedro": [
+    0.07,
+    0.0
+   ],
+   "Mabini": [
+    0.0,
+    0.0
+   ],
+   "Ki-Romero": [
+    0.0,
+    0.0
+   ],
+   "Malaking Ilog": [
+    0.0,
+    0.0
+   ],
+   "Mapanique": [
+    0.0,
+    0.0
+   ],
+   "San Jose": [
+    0.0,
+    0.0
+   ],
+   "Ki-Buaya": [
+    0.0,
+    0.0
+   ],
+   "Quintina": [
+    0.0,
+    0.0
+   ],
+   "Halabangbaybay": [
+    0.0,
+    0.0
+   ],
+   "Dangcalan": [
+    0.19,
+    0.11
+   ],
+   "Cueva": [
+    0.43,
+    0.2
+   ],
+   "Pinamasingan": [
+    0.25,
+    0.06
+   ],
+   "Laurente": [
+    0.6,
+    0.2
+   ],
+   "Iniwaran": [
+    0.76,
+    0.51
+   ]
+  }
+ },
+ "population_total_2020": 44449,
+ "population_served_today": 8428,
+ "picks": [
+  {
+   "lat": 13.0475,
+   "lon": 122.98361,
+   "ground_m": 194.0,
+   "near": "Mabuhay",
+   "dist_bolod_km": 8.64,
+   "bearing_from_bolod": 183.6,
+   "standalone_pop_outdoor": 15310,
+   "standalone_pop_indoor": 10393,
+   "incremental_pop_outdoor": 15310,
+   "incremental_pop_indoor": 10393,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 8.64424966593945,
+    "min_f1": 3.5907551452754216,
+    "obs_km": 4.772346169737403,
+    "obs_ground": 135.89909765623432
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.62
+    ],
+    "Terraplin": [
+     0.81,
+     0.52
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.54,
+     0.14
+    ],
+    "San Rafael": [
+     0.78,
+     0.56
+    ],
+    "Santa Cruz": [
+     0.59,
+     0.35
+    ],
+    "Mabuhay": [
+     0.62,
+     0.42
+    ],
+    "San Pedro": [
+     0.94,
+     0.86
+    ],
+    "Mabini": [
+     0.21,
+     0.02
+    ],
+    "Ki-Romero": [
+     0.83,
+     0.54
+    ],
+    "Malaking Ilog": [
+     0.47,
+     0.33
+    ],
+    "Mapanique": [
+     0.99,
+     0.86
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.09,
+     0.08
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.49,
+     0.2
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.33,
+     0.21
+    ]
+   }
+  },
+  {
+   "lat": 13.07,
+   "lon": 123.07694,
+   "ground_m": 127.0,
+   "near": "Dangcalan",
+   "dist_bolod_km": 11.37,
+   "bearing_from_bolod": 122.6,
+   "standalone_pop_outdoor": 11794,
+   "standalone_pop_indoor": 6900,
+   "incremental_pop_outdoor": 6588,
+   "incremental_pop_indoor": 4023,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 11.3678435865056,
+    "min_f1": 4.376500285520719,
+    "obs_km": 3.93964949691067,
+    "obs_ground": 86.42152380946096
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.0,
+     0.0
+    ],
+    "Terraplin": [
+     0.0,
+     0.0
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.0,
+     0.0
+    ],
+    "San Rafael": [
+     0.0,
+     0.0
+    ],
+    "Santa Cruz": [
+     0.0,
+     0.0
+    ],
+    "Mabuhay": [
+     0.0,
+     0.0
+    ],
+    "San Pedro": [
+     0.94,
+     0.65
+    ],
+    "Mabini": [
+     0.0,
+     0.0
+    ],
+    "Ki-Romero": [
+     0.0,
+     0.0
+    ],
+    "Malaking Ilog": [
+     0.0,
+     0.0
+    ],
+    "Mapanique": [
+     0.74,
+     0.32
+    ],
+    "San Jose": [
+     0.51,
+     0.17
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.58,
+     0.41
+    ],
+    "Halabangbaybay": [
+     0.31,
+     0.14
+    ],
+    "Dangcalan": [
+     0.87,
+     0.71
+    ],
+    "Cueva": [
+     0.75,
+     0.55
+    ],
+    "Pinamasingan": [
+     0.28,
+     0.01
+    ],
+    "Laurente": [
+     0.49,
+     0.18
+    ],
+    "Iniwaran": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "lat": 12.98917,
+   "lon": 123.10722,
+   "ground_m": 186.0,
+   "near": "Ki-Buaya",
+   "dist_bolod_km": 19.85,
+   "bearing_from_bolod": 139.6,
+   "standalone_pop_outdoor": 9130,
+   "standalone_pop_indoor": 6477,
+   "incremental_pop_outdoor": 3308,
+   "incremental_pop_indoor": 3132,
+   "mw_equal_mast_m": 45,
+   "mw_profile": {
+    "dist_km": 19.85192245290669,
+    "min_f1": 0.9312507996203537,
+    "obs_km": 7.478258231125214,
+    "obs_ground": 157.8988830330294
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.0,
+     0.0
+    ],
+    "Terraplin": [
+     0.0,
+     0.0
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.0,
+     0.0
+    ],
+    "San Rafael": [
+     0.0,
+     0.0
+    ],
+    "Santa Cruz": [
+     0.0,
+     0.0
+    ],
+    "Mabuhay": [
+     0.0,
+     0.0
+    ],
+    "San Pedro": [
+     0.0,
+     0.0
+    ],
+    "Mabini": [
+     0.0,
+     0.0
+    ],
+    "Ki-Romero": [
+     0.88,
+     0.62
+    ],
+    "Malaking Ilog": [
+     0.81,
+     0.45
+    ],
+    "Mapanique": [
+     0.84,
+     0.42
+    ],
+    "San Jose": [
+     0.9,
+     0.8
+    ],
+    "Ki-Buaya": [
+     0.96,
+     0.78
+    ],
+    "Quintina": [
+     0.96,
+     0.8
+    ],
+    "Halabangbaybay": [
+     0.83,
+     0.65
+    ],
+    "Dangcalan": [
+     0.0,
+     0.0
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.0,
+     0.0
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.0,
+     0.0
+    ]
+   }
+  }
+ ],
+ "network_after_3_outdoor": 33633,
+ "network_after_3_indoor": 25976,
+ "top_standalone": [
+  {
+   "lat": 13.0475,
+   "lon": 122.98361,
+   "ground_m": 194.0,
+   "near": "Mabuhay",
+   "dist_bolod_km": 8.64,
+   "bearing_from_bolod": 183.6,
+   "standalone_pop_outdoor": 15310,
+   "standalone_pop_indoor": 10393,
+   "incremental_pop_outdoor": 15310,
+   "incremental_pop_indoor": 10393,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 8.64424966593945,
+    "min_f1": 3.5907551452754216,
+    "obs_km": 4.772346169737403,
+    "obs_ground": 135.89909765623432
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.62
+    ],
+    "Terraplin": [
+     0.81,
+     0.52
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.54,
+     0.14
+    ],
+    "San Rafael": [
+     0.78,
+     0.56
+    ],
+    "Santa Cruz": [
+     0.59,
+     0.35
+    ],
+    "Mabuhay": [
+     0.62,
+     0.42
+    ],
+    "San Pedro": [
+     0.94,
+     0.86
+    ],
+    "Mabini": [
+     0.21,
+     0.02
+    ],
+    "Ki-Romero": [
+     0.83,
+     0.54
+    ],
+    "Malaking Ilog": [
+     0.47,
+     0.33
+    ],
+    "Mapanique": [
+     0.99,
+     0.86
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.09,
+     0.08
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.49,
+     0.2
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.33,
+     0.21
+    ]
+   }
+  },
+  {
+   "lat": 13.07944,
+   "lon": 122.99611,
+   "ground_m": 162.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 5.14,
+   "bearing_from_bolod": 170.9,
+   "standalone_pop_outdoor": 14998,
+   "standalone_pop_indoor": 9522,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 5.136685763722949,
+    "min_f1": 1.1389290755087171,
+    "obs_km": 4.656060195187468,
+    "obs_ground": 158.44404875350068
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.73
+    ],
+    "Terraplin": [
+     0.79,
+     0.61
+    ],
+    "Nazareno": [
+     0.6,
+     0.32
+    ],
+    "Busing": [
+     0.71,
+     0.36
+    ],
+    "Boca Chica": [
+     0.52,
+     0.24
+    ],
+    "San Rafael": [
+     0.59,
+     0.36
+    ],
+    "Santa Cruz": [
+     0.73,
+     0.5
+    ],
+    "Mabuhay": [
+     0.07,
+     0.03
+    ],
+    "San Pedro": [
+     1.0,
+     0.82
+    ],
+    "Mabini": [
+     0.09,
+     0.01
+    ],
+    "Ki-Romero": [
+     0.36,
+     0.06
+    ],
+    "Malaking Ilog": [
+     0.0,
+     0.0
+    ],
+    "Mapanique": [
+     0.83,
+     0.47
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.43,
+     0.32
+    ],
+    "Cueva": [
+     0.7,
+     0.43
+    ],
+    "Pinamasingan": [
+     0.91,
+     0.69
+    ],
+    "Laurente": [
+     0.08,
+     0.0
+    ],
+    "Iniwaran": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "lat": 13.08306,
+   "lon": 122.995,
+   "ground_m": 162.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 4.72,
+   "bearing_from_bolod": 171.5,
+   "standalone_pop_outdoor": 14942,
+   "standalone_pop_indoor": 9382,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 4.7200443733737085,
+    "min_f1": 5.981515713280849,
+    "obs_km": 3.6377412049568076,
+    "obs_ground": 129.92957961779302
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.76
+    ],
+    "Terraplin": [
+     0.78,
+     0.62
+    ],
+    "Nazareno": [
+     0.64,
+     0.35
+    ],
+    "Busing": [
+     0.71,
+     0.36
+    ],
+    "Boca Chica": [
+     0.57,
+     0.28
+    ],
+    "San Rafael": [
+     0.7,
+     0.46
+    ],
+    "Santa Cruz": [
+     0.72,
+     0.52
+    ],
+    "Mabuhay": [
+     0.07,
+     0.01
+    ],
+    "San Pedro": [
+     0.99,
+     0.69
+    ],
+    "Mabini": [
+     0.05,
+     0.01
+    ],
+    "Ki-Romero": [
+     0.25,
+     0.06
+    ],
+    "Malaking Ilog": [
+     0.0,
+     0.0
+    ],
+    "Mapanique": [
+     0.79,
+     0.44
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.43,
+     0.31
+    ],
+    "Cueva": [
+     0.67,
+     0.41
+    ],
+    "Pinamasingan": [
+     0.9,
+     0.67
+    ],
+    "Laurente": [
+     0.07,
+     0.0
+    ],
+    "Iniwaran": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "lat": 13.04083,
+   "lon": 122.98889,
+   "ground_m": 197.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 9.37,
+   "bearing_from_bolod": 179.8,
+   "standalone_pop_outdoor": 14848,
+   "standalone_pop_indoor": 10394,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 9.369857163957422,
+    "min_f1": 1.6433723358391312,
+    "obs_km": 4.354581053762263,
+    "obs_ground": 141.7961666050167
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.63,
+     0.34
+    ],
+    "Terraplin": [
+     0.34,
+     0.15
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.22,
+     0.05
+    ],
+    "San Rafael": [
+     0.71,
+     0.45
+    ],
+    "Santa Cruz": [
+     0.49,
+     0.28
+    ],
+    "Mabuhay": [
+     0.26,
+     0.09
+    ],
+    "San Pedro": [
+     0.97,
+     0.85
+    ],
+    "Mabini": [
+     0.61,
+     0.46
+    ],
+    "Ki-Romero": [
+     0.9,
+     0.67
+    ],
+    "Malaking Ilog": [
+     0.54,
+     0.36
+    ],
+    "Mapanique": [
+     0.96,
+     0.84
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.22,
+     0.17
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.63,
+     0.3
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.26,
+     0.18
+    ]
+   }
+  },
+  {
+   "lat": 13.07972,
+   "lon": 122.9925,
+   "ground_m": 163.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 5.06,
+   "bearing_from_bolod": 175.2,
+   "standalone_pop_outdoor": 14828,
+   "standalone_pop_indoor": 9330,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 5.058274443788679,
+    "min_f1": 1.1342647764793163,
+    "obs_km": 4.09479359735274,
+    "obs_ground": 152.79917061234778
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.76
+    ],
+    "Terraplin": [
+     0.8,
+     0.65
+    ],
+    "Nazareno": [
+     0.6,
+     0.33
+    ],
+    "Busing": [
+     0.7,
+     0.3
+    ],
+    "Boca Chica": [
+     0.54,
+     0.27
+    ],
+    "San Rafael": [
+     0.67,
+     0.38
+    ],
+    "Santa Cruz": [
+     0.75,
+     0.55
+    ],
+    "Mabuhay": [
+     0.11,
+     0.03
+    ],
+    "San Pedro": [
+     0.99,
+     0.78
+    ],
+    "Mabini": [
+     0.05,
+     0.01
+    ],
+    "Ki-Romero": [
+     0.32,
+     0.06
+    ],
+    "Malaking Ilog": [
+     0.0,
+     0.0
+    ],
+    "Mapanique": [
+     0.79,
+     0.49
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.42,
+     0.32
+    ],
+    "Cueva": [
+     0.7,
+     0.4
+    ],
+    "Pinamasingan": [
+     0.86,
+     0.57
+    ],
+    "Laurente": [
+     0.03,
+     0.0
+    ],
+    "Iniwaran": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "lat": 13.04861,
+   "lon": 122.98028,
+   "ground_m": 191.0,
+   "near": "Mabuhay",
+   "dist_bolod_km": 8.55,
+   "bearing_from_bolod": 186.1,
+   "standalone_pop_outdoor": 14799,
+   "standalone_pop_indoor": 10313,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 8.551452506439945,
+    "min_f1": 4.416931391453995,
+    "obs_km": 4.170708415421588,
+    "obs_ground": 123.5118095566406
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.61
+    ],
+    "Terraplin": [
+     0.83,
+     0.58
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.52,
+     0.22
+    ],
+    "San Rafael": [
+     0.76,
+     0.6
+    ],
+    "Santa Cruz": [
+     0.66,
+     0.43
+    ],
+    "Mabuhay": [
+     0.82,
+     0.71
+    ],
+    "San Pedro": [
+     0.93,
+     0.81
+    ],
+    "Mabini": [
+     0.12,
+     0.03
+    ],
+    "Ki-Romero": [
+     0.75,
+     0.35
+    ],
+    "Malaking Ilog": [
+     0.35,
+     0.23
+    ],
+    "Mapanique": [
+     0.99,
+     0.82
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.0,
+     0.0
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.33,
+     0.09
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.4,
+     0.22
+    ]
+   }
+  },
+  {
+   "lat": 13.07944,
+   "lon": 122.99278,
+   "ground_m": 163.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 5.09,
+   "bearing_from_bolod": 174.9,
+   "standalone_pop_outdoor": 14758,
+   "standalone_pop_indoor": 9297,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 20,
+   "mw_profile": {
+    "dist_km": 5.091947804568806,
+    "min_f1": 1.7741638207103823,
+    "obs_km": 4.097662138587914,
+    "obs_ground": 154.87940854061466
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.87,
+     0.76
+    ],
+    "Terraplin": [
+     0.81,
+     0.65
+    ],
+    "Nazareno": [
+     0.61,
+     0.34
+    ],
+    "Busing": [
+     0.69,
+     0.3
+    ],
+    "Boca Chica": [
+     0.54,
+     0.25
+    ],
+    "San Rafael": [
+     0.62,
+     0.38
+    ],
+    "Santa Cruz": [
+     0.74,
+     0.54
+    ],
+    "Mabuhay": [
+     0.1,
+     0.02
+    ],
+    "San Pedro": [
+     0.99,
+     0.8
+    ],
+    "Mabini": [
+     0.04,
+     0.01
+    ],
+    "Ki-Romero": [
+     0.33,
+     0.06
+    ],
+    "Malaking Ilog": [
+     0.0,
+     0.0
+    ],
+    "Mapanique": [
+     0.8,
+     0.5
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.43,
+     0.31
+    ],
+    "Cueva": [
+     0.71,
+     0.4
+    ],
+    "Pinamasingan": [
+     0.86,
+     0.56
+    ],
+    "Laurente": [
+     0.04,
+     0.0
+    ],
+    "Iniwaran": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  {
+   "lat": 13.04194,
+   "lon": 122.99222,
+   "ground_m": 191.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 9.25,
+   "bearing_from_bolod": 177.6,
+   "standalone_pop_outdoor": 14703,
+   "standalone_pop_indoor": 10410,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 25,
+   "mw_profile": {
+    "dist_km": 9.254566949279827,
+    "min_f1": 1.2096171843808174,
+    "obs_km": 4.687378065219653,
+    "obs_ground": 155.49389672187192
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.67,
+     0.21
+    ],
+    "Terraplin": [
+     0.38,
+     0.12
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.14,
+     0.02
+    ],
+    "San Rafael": [
+     0.66,
+     0.42
+    ],
+    "Santa Cruz": [
+     0.51,
+     0.24
+    ],
+    "Mabuhay": [
+     0.12,
+     0.01
+    ],
+    "San Pedro": [
+     0.98,
+     0.88
+    ],
+    "Mabini": [
+     0.72,
+     0.59
+    ],
+    "Ki-Romero": [
+     0.86,
+     0.65
+    ],
+    "Malaking Ilog": [
+     0.53,
+     0.34
+    ],
+    "Mapanique": [
+     0.96,
+     0.85
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.42,
+     0.33
+    ],
+    "Cueva": [
+     0.05,
+     0.02
+    ],
+    "Pinamasingan": [
+     0.66,
+     0.29
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.17,
+     0.11
+    ]
+   }
+  },
+  {
+   "lat": 13.04472,
+   "lon": 122.97861,
+   "ground_m": 183.0,
+   "near": "Mabuhay",
+   "dist_bolod_km": 9.0,
+   "bearing_from_bolod": 186.9,
+   "standalone_pop_outdoor": 14460,
+   "standalone_pop_indoor": 9906,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 15,
+   "mw_profile": {
+    "dist_km": 9.002177511576214,
+    "min_f1": 1.367134889956104,
+    "obs_km": 8.552068635997404,
+    "obs_ground": 179.9753999999689
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.83,
+     0.44
+    ],
+    "Terraplin": [
+     0.8,
+     0.39
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.48,
+     0.16
+    ],
+    "San Rafael": [
+     0.78,
+     0.64
+    ],
+    "Santa Cruz": [
+     0.58,
+     0.39
+    ],
+    "Mabuhay": [
+     0.83,
+     0.67
+    ],
+    "San Pedro": [
+     0.91,
+     0.75
+    ],
+    "Mabini": [
+     0.12,
+     0.05
+    ],
+    "Ki-Romero": [
+     0.7,
+     0.3
+    ],
+    "Malaking Ilog": [
+     0.47,
+     0.33
+    ],
+    "Mapanique": [
+     0.95,
+     0.78
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.0,
+     0.0
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.25,
+     0.05
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.4,
+     0.23
+    ]
+   }
+  },
+  {
+   "lat": 13.03889,
+   "lon": 122.99389,
+   "ground_m": 189.0,
+   "near": "San Pedro",
+   "dist_bolod_km": 9.6,
+   "bearing_from_bolod": 176.6,
+   "standalone_pop_outdoor": 14440,
+   "standalone_pop_indoor": 10516,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 30,
+   "mw_profile": {
+    "dist_km": 9.602911595692701,
+    "min_f1": 1.0540248896856619,
+    "obs_km": 4.741437600373271,
+    "obs_ground": 159.30244999998877
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.35,
+     0.1
+    ],
+    "Terraplin": [
+     0.14,
+     0.02
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.07,
+     0.01
+    ],
+    "San Rafael": [
+     0.62,
+     0.38
+    ],
+    "Santa Cruz": [
+     0.46,
+     0.17
+    ],
+    "Mabuhay": [
+     0.1,
+     0.01
+    ],
+    "San Pedro": [
+     0.97,
+     0.91
+    ],
+    "Mabini": [
+     0.82,
+     0.66
+    ],
+    "Ki-Romero": [
+     0.9,
+     0.71
+    ],
+    "Malaking Ilog": [
+     0.58,
+     0.36
+    ],
+    "Mapanique": [
+     0.96,
+     0.87
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.41,
+     0.33
+    ],
+    "Cueva": [
+     0.01,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.67,
+     0.31
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.16,
+     0.12
+    ]
+   }
+  },
+  {
+   "lat": 13.03833,
+   "lon": 122.98389,
+   "ground_m": 185.0,
+   "near": "Mabuhay",
+   "dist_bolod_km": 9.66,
+   "bearing_from_bolod": 183.0,
+   "standalone_pop_outdoor": 14134,
+   "standalone_pop_indoor": 9216,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 30,
+   "mw_profile": {
+    "dist_km": 9.661611852041059,
+    "min_f1": 1.6309166692943255,
+    "obs_km": 8.641441656483927,
+    "obs_ground": 189.31719457492514
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.47,
+     0.16
+    ],
+    "Terraplin": [
+     0.16,
+     0.04
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.2,
+     0.04
+    ],
+    "San Rafael": [
+     0.7,
+     0.47
+    ],
+    "Santa Cruz": [
+     0.46,
+     0.29
+    ],
+    "Mabuhay": [
+     0.46,
+     0.19
+    ],
+    "San Pedro": [
+     0.92,
+     0.8
+    ],
+    "Mabini": [
+     0.44,
+     0.14
+    ],
+    "Ki-Romero": [
+     0.89,
+     0.63
+    ],
+    "Malaking Ilog": [
+     0.56,
+     0.39
+    ],
+    "Mapanique": [
+     0.93,
+     0.75
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.0,
+     0.0
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.47,
+     0.14
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.38,
+     0.21
+    ]
+   }
+  },
+  {
+   "lat": 13.035,
+   "lon": 122.98917,
+   "ground_m": 195.0,
+   "near": "Mabuhay",
+   "dist_bolod_km": 10.02,
+   "bearing_from_bolod": 179.6,
+   "standalone_pop_outdoor": 14006,
+   "standalone_pop_indoor": 9673,
+   "incremental_pop_outdoor": null,
+   "incremental_pop_indoor": null,
+   "mw_equal_mast_m": 20,
+   "mw_profile": {
+    "dist_km": 10.018990639659444,
+    "min_f1": 1.4533696052967535,
+    "obs_km": 9.357075342144405,
+    "obs_ground": 193.67560847331706
+   },
+   "per_barangay": {
+    "Bolod (Poblacion)": [
+     0.13,
+     0.01
+    ],
+    "Terraplin": [
+     0.0,
+     0.0
+    ],
+    "Nazareno": [
+     0.0,
+     0.0
+    ],
+    "Busing": [
+     0.0,
+     0.0
+    ],
+    "Boca Chica": [
+     0.01,
+     0.0
+    ],
+    "San Rafael": [
+     0.62,
+     0.39
+    ],
+    "Santa Cruz": [
+     0.43,
+     0.2
+    ],
+    "Mabuhay": [
+     0.3,
+     0.07
+    ],
+    "San Pedro": [
+     0.95,
+     0.84
+    ],
+    "Mabini": [
+     0.72,
+     0.48
+    ],
+    "Ki-Romero": [
+     0.93,
+     0.74
+    ],
+    "Malaking Ilog": [
+     0.63,
+     0.41
+    ],
+    "Mapanique": [
+     0.94,
+     0.79
+    ],
+    "San Jose": [
+     0.0,
+     0.0
+    ],
+    "Ki-Buaya": [
+     0.0,
+     0.0
+    ],
+    "Quintina": [
+     0.0,
+     0.0
+    ],
+    "Halabangbaybay": [
+     0.0,
+     0.0
+    ],
+    "Dangcalan": [
+     0.05,
+     0.04
+    ],
+    "Cueva": [
+     0.0,
+     0.0
+    ],
+    "Pinamasingan": [
+     0.61,
+     0.25
+    ],
+    "Laurente": [
+     0.0,
+     0.0
+    ],
+    "Iniwaran": [
+     0.28,
+     0.16
+    ]
+   }
+  }
+ ]
+}

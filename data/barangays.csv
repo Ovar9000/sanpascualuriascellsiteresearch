@@ -1,0 +1,23 @@
+barangay,lat,lon,elev_m,pop_2020,bolod_served_today,notes
+Bolod (Poblacion),13.1271,122.9791,18.0,3626,yes,Town centre; existing 2-tower site on Bolod hill
+Terraplin,13.1302,122.9770,17.5,1618,yes,Port area
+Nazareno,13.1462,122.9928,4.4,1298,yes,
+Busing,13.1433,122.9657,18.6,1886,yes,
+Boca Chica,13.1221,122.9541,4.8,2756,no,
+San Rafael,13.0953,122.9576,8.1,3140,no,
+Santa Cruz,13.0673,122.9667,97.0,1945,no,
+Mabuhay,13.0421,122.9665,6.1,1410,no,
+San Pedro,13.0564,122.9994,130.0,3232,no,PhilAtlas JSON-LD gives alt point 13.0581/123.0155
+Mabini,13.0093,122.9965,8.7,1779,no,
+Ki-Romero,13.0073,123.0237,35.1,1487,no,Formerly Roxas
+Malaking Ilog,12.9995,123.0529,8.5,1911,no,
+Mapanique,13.0401,123.0628,38.9,1984,no,
+San Jose,12.9879,123.0822,73.1,1409,no,
+Ki-Buaya,12.9757,123.1045,102.4,846,no,Formerly Rizal
+Quintina,13.0030,123.1244,58.9,1637,no,PhilAtlas JSON-LD gives alt point 13.0210/123.1122
+Halabangbaybay,13.0518,123.0947,7.6,1150,no,
+Dangcalan,13.0827,123.0725,4.7,1430,no,
+Cueva,13.1089,123.0591,18.5,2788,no,
+Pinamasingan,13.0924,123.0236,14.6,2005,no,
+Laurente,13.1362,123.0209,5.2,2752,no,
+Iniwaran,13.1531,122.8739,10.2,2360,no,Island barangay (Templo/Iniwaran Island) west of Burias
