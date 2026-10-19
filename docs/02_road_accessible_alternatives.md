@@ -1,84 +1,88 @@
-# 2. Better Compromises Along the Road — Road‑Accessible Ridge Alternatives
+# 2. Better Compromises Along the Road — Road‑Accessible Ridge Sites (Revision 2)
 
-**Brief:** keep what the contractor wants (road access, a feasible power run, microwave line‑of‑sight to Bolod) but move to high ground that actually reaches the unserved barangays.
+With a usable reach of only **3–4 km**, a tower has to stand close to the people it serves. Every site below meets three tests:
 
-**Search method:** all 201 SRTM hilltops ≥ 60 m in San Pascual were screened. A site survived only if it met all three tests:
+- **Close to people:** high ground near an unserved barangay.
+- **Road access:** within **1 km of a road**.
+- **Backhaul:** a microwave path to Bolod clearing 0.6 F1 at k = 4/3 and 0.3 F1 at k = 2/3 at 15 GHz, with **≤ 45 m masts at both ends**.
 
-- **Road:** within **1 km** of a road corridor (≤ 1 km access spur).
-- **Backhaul:** a microwave path to Bolod hill that passes **0.6 F1 @ k=4/3 and 0.3 F1 @ k=2/3**, with **≤ 45 m masts at both ends**, including +10 m for canopy.
-- **Coverage:** scored on unserved residents served beyond what Bolod already reaches.
+We screened 93 road‑accessible hilltops. The full list is in [`results/candidates.csv`](../results/candidates.csv); all numbers are in [`results/review.json`](../results/review.json).
 
-71 hilltops passed. The best one on each road corridor is below. The ranked list of all 201 is in [`results/candidates.csv`](../results/candidates.csv).
+## 2.1 Five ridge sites, one per direction
 
-## 2.1 The four road‑accessible ridge sites
+| ID | Site | Lat, Lon | Ground | Road spur | Hop to Bolod | Masts (15 GHz) | **New residents** usable / indoor | Barangays lifted (share of settled area) |
+|---|---|---|---:|---:|---:|---:|---:|---|
+| **ALT‑A** | **Pinamasingan ridge**: same Poblacion–Pinamasingan road, further out | 13.0875, 123.0317 | 123 m | 723 m | 6.3 km | 40 m | **2,615 / 1,947** | Pinamasingan 100 %, Cueva 22 % |
+| **ALT‑B** | **Laurente–Nazareno ridge**: north‑coast road | 13.1414, 123.0061 | 72 m | 971 m | 2.6 km | 20 m | **2,293 / 1,914** | Laurente 85 %, Nazareno 38 % |
+| **ALT‑C** | **San Rafael–Santa Cruz ridge**: on the west‑coast road | 13.0697, 122.9636 | 120 m | 43 m | 6.7 km | 15 m | **4,089 / 2,401** | Santa Cruz 99 %, San Rafael 62 %, Mabuhay 14 % |
+| **ALT‑D** | **Malaking Ilog–Mapanique ridge**: inland road | 13.0075, 123.0556 | 153 m | 985 m | 15.0 km | 35 m (40 m @ 7 GHz) | **4,314 / 2,323** | Malaking Ilog 99 %, Mapanique 64 %, Ki‑Romero 62 %, San Jose 16 % |
+| **ALT‑E** | **Cueva ridge**: Poblacion–Quintina road | 13.1017, 123.0578 | 62 m | 410 m | 7.9 km | 35 m | **2,813 / 2,069** | Cueva 91 %, Pinamasingan 12 % |
+| *CT‑2* | *Contractor, deeper Bolod* | *13.1100, 122.9908* | *62 m* | *0* | *1.7 km* | — | ***0 / 0*** | *none* |
 
-| ID | Site | Lat, Lon | Ground | Road spur | Hop to Bolod | Masts needed (15 GHz) | Unserved residents reached | **Net new beyond Bolod** (outdoor / indoor) | Overlap with Bolod |
-|---|---|---|---:|---:|---:|---:|---:|---:|---:|
-| **ALT‑A** | **Pinamasingan ridge**: same Poblacion–Pinamasingan road, ~5 km past the contractor's spot | 13.0872 N, 123.0317 E | 123 m | 0.7 km | 6.3 km | 40 m / 40 m | 11,497 | **7,531 / 5,153** | 45 % |
-| **ALT‑B** | **Malaking Ilog–Mapanique ridge**: inland Pinamasingan–San Pedro–Mapanique road | 13.0075 N, 123.0556 E | 153 m | 1.0 km | 15.0 km | 35 m / 35 m (40 m at 7 GHz) | 12,174 | **11,622 / 10,046** | 12 % |
-| **ALT‑C** | **Cueva ridge**: north‑coast road via Laurente | 13.1017 N, 123.0578 E | 62 m | 0.4 km | 7.9 km | 35 m / 35 m | 9,285 | **5,444 / 4,933** | 43 % |
-| **ALT‑D** | **Santa Cruz ridge**: west‑coast road via San Rafael | 13.0636 N, 122.9717 E | 140 m | 0.6 km | 7.1 km | 15 m / 15 m | 11,147 | **6,555 / 4,982** | 58 % |
-| *CT‑2* | *Contractor (for reference)* | *13.1100 N, 122.9908 E* | *62 m* | *0* | *1.7 km* | *trivial* | *4,925* | ***0 / 0*** | *91 %* |
+One map per site: `results/fig_alt-a.png` … `fig_alt-e.png`. Microwave profiles: `results/fig_mw_profiles.png`.
 
-Barangays each site lifts to service (share of the settlement area at ≥ −110 dBm):
+![Side by side](../results/fig_side_by_side.png)
 
-- **ALT‑A:** Pinamasingan 100 %, San Pedro 93 %, Cueva 81 %, Mapanique 54 %, Dangcalan 44 %, Mabini 41 %
-- **ALT‑B:** Mapanique 100 %, Malaking Ilog 100 %, San Pedro 99 %, Ki‑Romero 93 %, San Jose 81 %, Ki‑Buaya 74 %, Mabini 53 %, Dangcalan 50 %
-- **ALT‑C:** Cueva 99 %, San Pedro 75 %, Pinamasingan 72 %, Laurente 63 %, Dangcalan 43 %
-- **ALT‑D:** Santa Cruz 96 %, San Pedro 84 %, San Rafael 81 %, Mabuhay 65 %, Boca Chica 59 %
+## 2.2 Network plan: no single tower can do it
 
-![All sites](../results/fig_all_sites.png)
+Sites were added one at a time, each chosen for the most new residents and each needing a microwave hop to Bolod or to an earlier site:
 
-## 2.2 Recommended positions for the council
+| # | Site | Lat, Lon | Ground | Spur | Backhaul via | Adds | Municipality within service |
+|---|---|---|---:|---:|---|---:|---:|
+| — | Bolod today (model) | | | | | | 8,927 (20 %) |
+| N1 | Malaking Ilog–Mapanique ridge (ALT‑D) | 13.0075, 123.0556 | 153 m | 985 m | Bolod, 15.0 km | +4,314 | 13,241 (30 %) |
+| N2 | San Rafael–Santa Cruz ridge (ALT‑C) | 13.0697, 122.9636 | 120 m | 43 m | Bolod, 6.7 km | +4,089 | 17,330 (39 %) |
+| N3 | San Pedro hill | 13.0542, 123.0025 | 135 m | 206 m | N1, 7.8 km | +3,232 | 20,562 (46 %) |
+| N4 | Cueva ridge (ALT‑E) | 13.1017, 123.0578 | 62 m | 410 m | Bolod, 7.9 km | +2,813 | 23,375 (53 %) |
+| N5 | Boca Chica hill | 13.1231, 122.9600 | 64 m | 358 m | Bolod, 3.1 km | +2,297 | 25,672 (58 %) |
+| N6 | Laurente–Nazareno ridge (ALT‑B) | 13.1414, 123.0061 | 72 m | 971 m | Bolod, 2.6 km | +2,293 | 27,965 (63 %) |
+| N7 | Mabini hill | 13.0125, 123.0022 | 100 m | 707 m | N1, 5.8 km | +1,841 | 29,806 (67 %) |
+| N8 | Pinamasingan ridge (ALT‑A) | 13.0875, 123.0317 | 123 m | 723 m | Bolod, 6.3 km | +1,773 | 31,579 (71 %) |
+| *—* | *Bolod + contractor site* | | | | | *+0* | *8,927 (20 %)* |
 
-1. **Minimum acceptable compromise: ALT‑A, Pinamasingan ridge.** Same road the contractor already chose, about 5 km further out, plus a 0.7 km spur. It is still a single 6.3 km hop to Bolod (40 m masts). It brings **~7,500 net new residents (5,200 indoor‑grade)** against **zero** for the proposed spot. This is the easiest "yes" to put to the contractor.
-2. **Best single site for the unserved: ALT‑B, Malaking Ilog–Mapanique ridge.** Largest gain (**~11,600 net, 10,000 indoor**) and only 12 % overlap with Bolod. It covers the whole southern belt. The trade‑off is a **15 km hop**: in ITU rain zone P, specify **7/8 GHz** (40 m masts) or an 11 GHz link with adaptive modulation, not 15/18 GHz. Power will likely need a solar‑hybrid system.
-3. **Best two‑site package: ALT‑B + ALT‑D.** **15,268 net new residents.** With Bolod, about **28,600 of 44,449 (64 %)** are within service, against **~13,400 (30 %)** for Bolod plus the contractor's site. ALT‑D has the easiest backhaul on the island (15 m masts, 7.1 km).
+![Network](../results/fig_network.png)
+![Build-out](../results/fig_buildout.png)
 
-| Package | Net new beyond Bolod | Municipality within service (with Bolod)* |
-|---|---:|---:|
-| Contractor CT‑2 | **0** | 13,353 (30 %) |
-| ALT‑A only | 7,531 | 19,925 (45 %) |
-| ALT‑B only | 11,622 | 20,602 (46 %) |
-| ALT‑A + ALT‑B | 14,186 | 26,580 (60 %) |
-| **ALT‑B + ALT‑D** | **15,268** | **28,557 (64 %)** |
-| ALT‑B + ALT‑C + ALT‑D | 17,861 | 34,394 (77 %) |
+## 2.3 Recommended positions for the council
 
-\*Counts the 4 barangays the council considers served, plus each package's outdoor coverage of the other 18.
+1. **Phase 1, the ask:** ALT‑D (Malaking Ilog–Mapanique) and ALT‑C (San Rafael–Santa Cruz).
+   - **+8,403 residents**; service rises from 20 % to **39 %**.
+   - ALT‑C sits on the west‑coast road with the easiest backhaul on the island (15 m masts).
+   - ALT‑D needs a 15 km link: specify 7/8 GHz, not 15/18 GHz, in rain zone P.
+2. **Minimum compromise if the contractor will only build on its own road:** ALT‑A Pinamasingan ridge (+2,615), or ALT‑E Cueva ridge on the Poblacion–Quintina road (+2,813). Either beats the proposed spot's zero.
+3. **Laurente specifically:** ALT‑B gives Laurente 85 % usable coverage with a cheap 2.6 km hop.
+4. **Roadmap:** ask for the eight‑site plan above, which reaches **71 %** of residents.
 
-## 2.3 Board matrix: four metrics
+## 2.4 Board matrix: four metrics
 
-Scores run from 1 (poor) to 5 (excellent). Population figures are 2020 Census residents (out of 44,449; 36,021 unserved).
+Scores run from 1 (poor) to 5 (excellent).
 
-| Site | ① Population covered (net new beyond Bolod) | ② Backhaul feasibility to Bolod | ③ Power / road accessibility | ④ Commercial viability | **Overall** |
+| Site | ① Population covered (new) | ② Backhaul to Bolod | ③ Power / road | ④ Commercial viability (indicative) | Verdict |
 |---|---|---|---|---|---|
-| **CT – Contractor, deeper Bolod** | **1** – ~0 net (4.9–5.7k in overlapping fringe) | **5** – 1–2 km, trivial | **5** – on the road, near grid | **1** as a coverage site (no new subscribers); 3 if justified purely as capacity | **Reject as a coverage project** |
-| **ALT‑A – Pinamasingan ridge** | **4** – 7.5k (5.2k indoor) | **4** – 6.3 km, 40 m both ends | **4** – 0.7 km spur off the same road; DPWH Pinamasingan road (FY2024) | **4** | **Minimum compromise** |
-| **ALT‑B – Malaking Ilog–Mapanique ridge** | **5** – 11.6k (10.0k indoor) | **3** – 15 km; 7/8 GHz with 40 m masts | **3** – 1 km spur; remote; solar‑hybrid | **5** – largest captive unserved market | **Best single site** |
-| **ALT‑C – Cueva ridge** | **3** – 5.4k (4.9k indoor) | **4** – 7.9 km, 35 m | **4** – 0.4 km off the coast road | **3** | Phase‑3 infill |
-| **ALT‑D – Santa Cruz ridge** | **4** – 6.6k (5.0k indoor) | **5** – 7.1 km, 15 m masts | **4** – 0.6 km off the west‑coast road | **4** | **Best partner to ALT‑B** |
+| **CT** Contractor | **1** – 0 | **5** – 1–2 km | **5** – on road, near grid | **1** – no new subscribers | **Reject as coverage project** |
+| **ALT‑A** Pinamasingan | 3 – 2,615 | 4 – 6.3 km, 40 m | 3 – 723 m spur | 3 – ₱1.6–2.4 M/yr | Minimum compromise on contractor's road |
+| **ALT‑B** Laurente–Nazareno | 3 – 2,293 | 5 – 2.6 km, 20 m | 3 – 971 m spur | 3 – ₱1.4–2.1 M/yr | Laurente fix, cheap hop |
+| **ALT‑C** San Rafael–Santa Cruz | 5 – 4,089 | 5 – 6.7 km, 15 m | 5 – on the road | 5 – ₱2.5–3.7 M/yr | **Phase 1** |
+| **ALT‑D** Malaking Ilog–Mapanique | 5 – 4,314 | 3 – 15 km, 35–40 m | 3 – 985 m spur, solar‑hybrid | 4 – ₱2.6–3.9 M/yr | **Phase 1, best single site** |
+| **ALT‑E** Cueva | 3 – 2,813 | 4 – 7.9 km, 35 m | 4 – 410 m spur | 3 – ₱1.7–2.5 M/yr | Phase 2 |
 
-**Indicative commercial lens.** These assumptions are for discussion and should be replaced with the operator's own figures:
+**Commercial lens.** These figures are indicative, to be replaced with operator data.
 
-- **Revenue:** at a blended ₱600–900 per covered resident per year (rural Bicol mix of prepaid voice and data), ALT‑B's ~11.6k net residents mean **₱7–10 M/yr**. ALT‑A's 7.5k mean **₱4.5–6.8 M/yr**.
-- **Contractor site:** almost no new revenue, because the residents in its footprint already sit inside the Bolod signal.
-- **Capex:** a typical 40 m greenfield with microwave is **₱10–15 M**. A hilltop adds **₱3–6 M** for the access spur and solar‑hybrid power.
-- **Payback:** about **2–3 years** for ALT‑A/ALT‑B. The contractor's site has none on coverage grounds.
+- **Revenue:** ₱600–900 per newly covered resident per year.
+- **Capex:** a 40 m greenfield with microwave costs ₱10–15 M, plus ₱3–6 M for a hilltop spur and solar‑hybrid power.
+- **Payback:** a single ridge site pays back in roughly 4–7 years.
+- **The contractor's site:** no new revenue; it only moves traffic off Bolod.
 
-## 2.4 Unconstrained benchmark (if road access were not a constraint)
+A 3–4 km reach means full coverage depends on shared infrastructure: multi‑operator tenancy, DICT common‑tower and connectivity programmes, and LGU help with land and access roads.
 
-Ignoring the 1 km road rule, the strongest hilltops are:
+## 2.5 Unconstrained benchmark
 
-| Rank | Location | Ground | Unserved residents reached | Hop to Bolod |
-|---|---|---:|---:|---:|
-| 1 | Central massif, Santa Cruz / San Pedro / Mabuhay (13.0475 N, 122.9836 E) | 194 m | 15,310 | 8.6 km, 15 m masts |
-| 2 | Dangcalan ridge (13.0700 N, 123.0769 E) | 127 m | 11,794 | 11.4 km, 15 m masts |
-| 3 | Ki‑Buaya ridge (12.9892 N, 123.1072 E) | 186 m | 9,130 | 19.9 km, 45 m masts |
+Ignoring the 1 km road rule, the three strongest hilltops reach 21,256 residents. The best road‑accessible three‑site package reaches 20,143. **The road constraint costs almost nothing.** See [`results/selection.json`](../results/selection.json).
 
-The three together reach **~33,600 of 44,449**. The road‑accessible ALT‑B + ALT‑C + ALT‑D package gets 34,400, so the road constraint costs almost nothing. **That is the core argument: the contractor does not have to give up road access to serve the interior.** See [`results/selection.json`](../results/selection.json).
+## 2.6 Before any site is final
 
-## 2.5 Before any of these is final
+Each of these needs confirming before it is final:
 
-- **Survey‑grade check:** have each ridge spot walked, with a GPS fix and an obstruction photo toward Bolod. SRTM is 30 m data with ±5–10 m vertical error.
-- **Road reality check:** the corridor used here is inferred from terrain because no road file was available. Confirm actual road and power‑line alignments with the MPDO / MASELCO, or with an OSM or Google Earth trace, and re‑run `analysis/contractor_review.py`.
-- **Land:** check lot ownership and lease availability on each ridge; municipal or barangay land helps.
+- **Site walk:** GPS fix, obstruction photo toward the parent site, land ownership.
+- **Real road and power‑line alignment:** ours is inferred from terrain.
+- **The operator's band:** a 700/850 MHz layer would reach further than the 1800 MHz‑like 3–4 km seen today.

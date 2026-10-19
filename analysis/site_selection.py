@@ -140,9 +140,9 @@ def main():
 
     result = {
         "assumptions": {
-            "band_MHz": rf.F_MHZ, "eirp_per_RE_dBm": rf.EIRP_RE_DBM, "clutter_dB": rf.CLUTTER_DB,
+            "band_MHz": rf.F_MHZ, "eirp_per_RE_dBm": rf.EIRP_RE_DBM, "k_diff": rf.K_DIFF,
             "rsrp_outdoor_dBm": rf.RSRP_OUTDOOR, "rsrp_indoor_dBm": rf.RSRP_INDOOR,
-            "max_land_km": rf.MAX_LAND_KM, "mast_agl_m": MAST_AGL, "mw_GHz": MW_GHZ,
+            "max_range_km": rf.MAX_RANGE_KM, "mast_agl_m": MAST_AGL, "mw_GHz": MW_GHZ,
         },
         "bolod": {**BOLOD, "per_barangay": {b["barangay"]: [round(x, 2) for x in bolod_cov[i]] for i, b in enumerate(brgys)}},
         "population_total_2020": int(pops.sum()),

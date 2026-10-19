@@ -22,7 +22,7 @@ Hand one question to each councilor. Each comes with what a good answer looks li
 **Q1 — "Submit the RSRP propagation map, for your site *and* the existing Bolod towers."**
 > "Please submit your predicted RSRP coverage map for the proposed tower, showing the −100 dBm and −110 dBm contours. Submit the same map for the existing Bolod hill towers, with the tool and propagation model used, terrain resolution, antenna height, azimuths, tilt and transmit power. Then show us the *difference*: which barangays, and how many residents, get −100 dBm service from your tower that they do not get today?"
 - *Good answer:* a named list of barangays with residents and a difference map.
-- *If they dodge:* "Our independent analysis shows 84–94 % overlap and essentially zero new residents. Please show us where we are wrong."
+- *If they dodge:* "Our independent analysis shows 75–94 % overlap and zero new residents. Please show us where we are wrong."
 
 **Q2 — "Your antennas will be lower than the ones already there. What can they see that Bolod hill can't?"**
 > "Your antennas would be at roughly 100–113 m above sea level. The existing Bolod antennas are at about 148 m, less than 2 km away. Name one unserved barangay — San Pedro, Pinamasingan, Mapanique, Santa Cruz, Ki‑Romero, Malaking Ilog — that your tower will reach and Bolod cannot, and show us the terrain profile."
@@ -36,7 +36,7 @@ Hand one question to each councilor. Each comes with what a good answer looks li
 > "Is this tower one phase of a plan? Give us the rollout schedule, with sites, coordinates and dates, for the inland and southern barangays. What contractual commitment will you sign to on‑air dates and a coverage target?"
 - *Follow‑up:* "Will you commit to a post‑construction drive test, shared with this council, within 60 days of on‑air?"
 
-**Q5 — "Will it stay up when the grid is down, and when a typhoon hits?"**
+**Q5 — "Which frequency band will you use, and will it stay up when the grid is down or a typhoon hits?"**
 > "What is the backhaul — microwave or fibre, frequency, link distance, availability target in our rain zone? What is the power plan: grid hours, battery autonomy, generator or solar? What is the tower's design wind speed under the NSCP, and what is your typhoon restoration time?"
 - *Why it matters:* this is a public‑safety asset. The far barangays need a site that survives outages, and disaster coordination depends on it.
 
@@ -54,12 +54,14 @@ Use whichever instrument the Legal Officer confirms is valid (see 4.0). Recommen
 
 **A. Coverage‑extension conditions (the core)**
 
-1. **Siting:** the new structure shall be on a site that delivers **RSRP ≥ −100 dBm** to at least **[5,000] residents of the 18 currently unserved barangays** who do not receive that level from the existing Bolod towers. Compliance is shown by the propagation study in B1.
+1. **Siting:** the new structure shall be on a site that delivers **RSRP ≥ −100 dBm** to at least **[2,000] residents of the 18 currently unserved barangays** who do not receive that level from the existing Bolod towers. Compliance is shown by the propagation study in B1.
    - *Pre‑qualified sites* (any one satisfies the intent, subject to survey):
-     - **ALT‑A** Pinamasingan ridge, 13.0872 N, 123.0317 E
-     - **ALT‑B** Malaking Ilog–Mapanique ridge, 13.0075 N, 123.0556 E
-     - **ALT‑D** Santa Cruz ridge, 13.0636 N, 122.9717 E
-2. **Fallback if the contractor insists on the deeper‑Bolod site:** the endorsement is for **capacity purposes only**. It must be paired with a **binding commitment to build a ridge site (ALT‑A or ALT‑B) within [12–18] months**, with the endorsement **lapsing** if that site is not on air by the deadline.
+     - **ALT‑A** Pinamasingan ridge, 13.0875 N, 123.0317 E
+     - **ALT‑B** Laurente–Nazareno ridge, 13.1414 N, 123.0061 E
+     - **ALT‑C** San Rafael–Santa Cruz ridge, 13.0697 N, 122.9636 E
+     - **ALT‑D** Malaking Ilog–Mapanique ridge, 13.0075 N, 123.0556 E
+     - **ALT‑E** Cueva ridge, 13.1017 N, 123.0578 E
+2. **Fallback if the contractor insists on the deeper‑Bolod site:** the endorsement is for **capacity purposes only**. It must be paired with a **binding commitment to build a ridge site (ALT‑C or ALT‑D, or at minimum ALT‑A) within [12–18] months**, with the endorsement **lapsing** if that site is not on air by the deadline.
 3. **Co‑location first:** if the stated purpose is a new tenant or capacity, the applicant shall first show that co‑location on the existing Bolod hill towers is technically or commercially impossible.
 
 **B. Evidence before endorsement**
@@ -89,6 +91,6 @@ Use whichever instrument the Legal Officer confirms is valid (see 4.0). Recommen
 
 ## 4.3 Draft operative clause (for the Secretary to the Sanggunian)
 
-> *RESOLVED, as it is hereby resolved, that the Sangguniang Bayan of San Pascual, Masbate, interposes NO OBJECTION to the construction of a telecommunications tower by [Applicant], **SUBJECT TO** the conditions in Annex "A"; **PROVIDED**, that the tower shall be located at a site demonstrated by propagation study to deliver RSRP of not less than −100 dBm to not fewer than [5,000] residents of the barangays not presently served by the existing Bolod towers; **PROVIDED FURTHER**, that should the Applicant proceed at the deeper Barangay Bolod / Pinamasingan Road location, this resolution shall be deemed endorsement for capacity purposes only and shall lapse unless a second site at the Pinamasingan ridge or the Malaking Ilog–Mapanique ridge, or an equivalent site acceptable to this Body, is placed on air within [eighteen (18)] months …*
+> *RESOLVED, as it is hereby resolved, that the Sangguniang Bayan of San Pascual, Masbate, interposes NO OBJECTION to the construction of a telecommunications tower by [Applicant], **SUBJECT TO** the conditions in Annex "A"; **PROVIDED**, that the tower shall be located at a site demonstrated by propagation study to deliver RSRP of not less than −100 dBm to not fewer than [2,000] residents of the barangays not presently served by the existing Bolod towers; **PROVIDED FURTHER**, that should the Applicant proceed at the deeper Barangay Bolod / Pinamasingan Road location, this resolution shall be deemed endorsement for capacity purposes only and shall lapse unless a second site at the Malaking Ilog–Mapanique ridge, the San Rafael–Santa Cruz ridge or the Pinamasingan ridge, or an equivalent site acceptable to this Body, is placed on air within [eighteen (18)] months …*
 
 *(Have the Municipal Legal Officer adapt this to EO 32 and JMC 01 s. 2021 before adoption.)*

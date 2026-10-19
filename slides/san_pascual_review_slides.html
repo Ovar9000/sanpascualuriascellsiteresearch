@@ -1,0 +1,442 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>San Pascual Cell-Site Review</title>
+<style>/* 1920x1080 print slides. Palette follows the maps: green = existing Bolod, orange = contractor, blue = ridge sites. */
+:root {
+  --ink: #16211b; --muted: #5a675f; --rule: #d7ddd8; --paper: #ffffff; --tint: #f3f5f1;
+  --bolod: #2e7d32; --ct: #d97706; --ridge: #1565c0; --bad: #b3261e; --terrain: #b9a983;
+}
+@page { size: 1920px 1080px; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--paper); color: var(--ink); font-family: "Inter", "Carlito", "Liberation Sans", sans-serif; }
+.slide { width: 1920px; height: 1080px; padding: 64px 88px 70px; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; gap: 28px; }
+.slide:last-child { page-break-after: auto; }
+header { display: grid; gap: 8px; border-bottom: 2px solid var(--ink); padding-bottom: 16px; }
+.eyebrow { font-size: 19px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+.eyebrow.light { color: #c9d6cc; }
+h2 { font-family: "Inter Display", "Inter", sans-serif; font-size: 50px; line-height: 1.08; margin: 0; font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 27px; margin: 0 0 12px; font-weight: 700; }
+p { margin: 0; }
+.body { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 22px; font-size: 25px; line-height: 1.42; }
+footer { position: absolute; left: 88px; right: 88px; bottom: 26px; display: flex; justify-content: space-between; font-size: 16px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 10px; }
+.lead { font-size: 27px; line-height: 1.42; max-width: 1640px; }
+.note { font-size: 18px; color: var(--muted); line-height: 1.4; }
+.mono { font-family: "DejaVu Sans Mono", monospace; font-size: .86em; }
+ul, ol { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; }
+ul.big, ol.big { font-size: 26px; gap: 14px; }
+em { font-style: normal; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+
+/* layouts */
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.two.wide-left { grid-template-columns: 1.25fr 1fr; }
+.two.wide-right { grid-template-columns: 1fr 1.15fr; align-items: center; }
+.three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; }
+.four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+.stack { display: grid; gap: 18px; align-content: start; }
+.card { background: var(--tint); border-radius: 10px; padding: 30px 32px; display: grid; gap: 14px; align-content: start; font-size: 23px; }
+.card .fix { border-top: 1px solid var(--rule); padding-top: 12px; color: var(--ridge); }
+.fig { display: block; max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 6px; }
+.fig.wide { max-height: 700px; width: auto; align-self: center; }
+.fig-row { display: grid; grid-template-columns: auto 1fr; gap: 48px; align-items: start; height: 100%; min-height: 0; }
+.fig.tall { max-height: 830px; width: auto; }
+.side { display: grid; gap: 16px; align-content: start; font-size: 24px; }
+
+/* cover */
+.cover-slide { padding: 0; background: #12241a; color: #f2f5f0; }
+.cover-slide .body { display: block; }
+.cover { display: grid; grid-template-columns: 820px 1fr; height: 1080px; }
+.cover-text { padding: 120px 72px 80px 96px; display: flex; flex-direction: column; gap: 34px; }
+.cover-title { font-family: "Inter Display", "Inter", sans-serif; font-size: 92px; line-height: 1.0; margin: 0; font-weight: 800; letter-spacing: -0.02em; }
+.cover-sub { font-size: 30px; line-height: 1.42; color: #d5e0d8; }
+.cover-meta { margin-top: auto; font-size: 20px; color: #9fb4a6; border-top: 1px solid #355241; padding-top: 18px; }
+.cover-map { width: 100%; height: 1080px; object-fit: cover; object-position: 78% 50%; }
+
+/* KPIs */
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--rule); }
+.kpi { padding: 22px 26px 22px 0; display: grid; gap: 6px; align-content: start; }
+.kpi + .kpi { padding-left: 26px; border-left: 1px solid var(--rule); }
+.kpi b { font-family: "Inter Display", "Inter", sans-serif; font-size: 66px; line-height: 1; font-weight: 800; font-variant-numeric: tabular-nums; }
+.kpi span { font-size: 20px; color: var(--muted); line-height: 1.35; }
+.kpi.ct b { color: var(--ct); } .kpi.rd b { color: var(--ridge); }
+
+/* horizontal population bars */
+.hbars { display: grid; gap: 5px; font-size: 19px; }
+.hb { display: grid; grid-template-columns: 210px 1fr 80px; gap: 14px; align-items: center; }
+.hb-t { height: 24px; background: #eef1ed; border-radius: 3px; position: relative; }
+.hb-f { position: absolute; inset: 0 auto 0 0; border-radius: 3px; }
+.hb-f.sv, .sw.sv { background: var(--bolod); } .hb-f.us, .sw.us { background: #c62828; }
+.hb-v { text-align: right; font-variant-numeric: tabular-nums; }
+.legend-row { font-size: 22px; display: flex; gap: 12px; align-items: center; }
+.sw { width: 22px; height: 22px; border-radius: 3px; display: inline-block; }
+
+/* tables */
+table.t { border-collapse: collapse; width: 100%; font-size: 20px; }
+table.t th, table.t td { padding: 11px 14px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.t th { font-size: 16px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; border-bottom: 2px solid var(--ink); }
+table.t.big { font-size: 23px; }
+table.t.sm { font-size: 17px; }
+table.t td.r, table.t th.r { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.t td.big { font-size: 1.25em; font-weight: 700; color: var(--ridge); }
+table.t .sm, .sm { font-size: 16px; color: var(--muted); }
+tr.ref td { color: var(--bolod); font-weight: 600; }
+tr.ct-row td { background: #fff4e5; }
+tr.ct-row td.big { color: var(--ct); }
+td.bad { color: var(--bad); font-weight: 700; }
+table.matrix td { font-size: 20px; }
+.pips { display: inline-flex; gap: 4px; margin-right: 8px; vertical-align: 1px; }
+.pips i { width: 13px; height: 13px; border-radius: 50%; border: 1.5px solid var(--muted); display: inline-block; }
+.pips i.on { background: var(--ink); border-color: var(--ink); }
+
+/* signal classes */
+.classes { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; }
+.cls { border-top: 14px solid var(--c); background: var(--tint); border-radius: 6px; padding: 22px; display: grid; gap: 8px; align-content: start; font-size: 21px; }
+.cls b { font-size: 26px; } .cls span { font-family: "DejaVu Sans Mono", monospace; font-size: 19px; color: var(--muted); }
+
+/* heights */
+.heights { display: grid; gap: 20px; background: var(--tint); border-radius: 10px; padding: 34px 40px; }
+.hrow, .haxis { display: grid; grid-template-columns: 420px 1fr 120px; gap: 22px; align-items: center; }
+.hl { font-size: 24px; font-weight: 600; } .hl small { display: block; font-size: 18px; font-weight: 400; color: var(--muted); }
+.ht { position: relative; height: 40px; background: #e3e7e1; border-radius: 4px; overflow: hidden; }
+.hg { position: absolute; inset: 0 auto 0 0; background: var(--terrain); }
+.hm { position: absolute; top: 0; bottom: 0; }
+.hv { font-family: "DejaVu Sans Mono", monospace; font-size: 22px; text-align: right; }
+.haxis > div:nth-child(2) { display: flex; justify-content: space-between; font-family: "DejaVu Sans Mono", monospace; font-size: 16px; color: var(--muted); }
+
+/* facts */
+dl.facts { display: grid; grid-template-columns: 230px 1fr; gap: 10px 20px; margin: 8px 0 0; font-size: 21px; }
+dl.facts dt { color: var(--muted); font-size: 18px; text-transform: uppercase; letter-spacing: .05em; padding-top: 3px; }
+dl.facts dd { margin: 0; }
+
+/* questions */
+ol.qs { list-style: none; padding: 0; gap: 16px; }
+ol.qs li { display: grid; grid-template-columns: 80px 1fr; gap: 18px; background: var(--tint); border-radius: 8px; padding: 18px 24px; }
+.qn { font-family: "Inter Display", "Inter", sans-serif; font-size: 40px; font-weight: 800; color: var(--ridge); line-height: 1; }
+.qa { font-size: 24px; font-weight: 600; } .qw { font-size: 19px; color: var(--muted); margin-top: 6px; }
+
+/* conditions */
+.cond { border-top: 4px solid var(--ink); padding-top: 14px; font-size: 20px; }
+.cond ul { gap: 10px; }
+.callout { border: 2px solid var(--bad); background: #fdf1f0; border-radius: 10px; padding: 28px 34px; font-size: 27px; }
+
+table.t.tight td, table.t.tight th { padding: 6px 12px; }
+.cond { font-size: 22px; }
+.card { font-size: 24px; }
+.card ol { gap: 12px; }
+ol.qs li { padding: 22px 26px; }
+.qa { font-size: 26px; } .qw { font-size: 20px; }
+</style></head><body>
+<section class="slide cover-slide"><div class="body">
+<div class="cover">
+  <div class="cover-text">
+    <div class="eyebrow light">Technical Advisor's review · Sangguniang Bayan of San Pascual, Masbate</div>
+    <h1 class="cover-title">San Pascual Cell-Site Review</h1>
+    <p class="cover-sub">The proposed tower in deeper Barangay Bolod near the Pinamasingan Road, tested against the existing
+    Bolod hill towers and against road-accessible ridge sites, using a coverage model calibrated to what residents actually receive.</p>
+    <div class="cover-meta">Revision 2 · October 2026 · Field-calibrated coverage model (usable range 3–4 km)</div>
+  </div>
+  <img class="cover-map" src="../results/fig_network.png" alt="">
+</div></div></section>
+<section class="slide "><header><div class="eyebrow">Summary</div><h2>The proposed tower copies Bolod. Ridge sites reach new people.</h2></header><div class="body">
+<div class="kpis">
+  <div class="kpi"><b>36,021</b><span>residents in 18 barangays with no usable signal (81% of 44,449)</span></div>
+  <div class="kpi ct"><b>87%</b><span>of the contractor site's coverage is already covered by Bolod</span></div>
+  <div class="kpi ct"><b>0</b><span>unserved residents it adds in all three location scenarios with a 40 m mast (at most 15 even at 60 m)</span></div>
+  <div class="kpi rd"><b>4,314</b><span>added by the best single ridge site (Malaking Ilog–Mapanique)</span></div>
+</div>
+<div class="two">
+  <div>
+    <h3>What we found</h3>
+    <ul class="big">
+      <li>The existing Bolod towers reach about 3–4 km. They serve Bolod, Terraplin, Nazareno and Busing, and do not reach Laurente. Our model now reproduces this.</li>
+      <li>The contractor's antennas would sit 46 m <em>lower</em> than Bolod's, 1–2 km away. Everything they can reach, Bolod already reaches.</li>
+      <li>Because signal only travels 3–4 km here, the unserved barangays need towers <em>near them</em>, on high ground. Every ridge site we propose is within 1 km of a road and has a clear microwave link back.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>What we recommend</h3>
+    <ul class="big">
+      <li><b>Do not endorse the deeper-Bolod site as a coverage project.</b></li>
+      <li>Ask for the Malaking Ilog–Mapanique and San Rafael–Santa Cruz ridges first: +8,403 residents, taking service from 20% to 39%.</li>
+      <li>If the contractor will only build on its own road: the Pinamasingan ridge (+2,615) or the Cueva ridge (+2,813).</li>
+      <li>Ask for an eight-site roadmap: 71% of residents within service.</li>
+    </ul>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>2 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">The problem</div><h2>36,021 of 44,449 residents have no usable signal</h2></header><div class="body">
+<div class="two wide-left">
+  <div class="hbars"><div class="hb"><span class="hb-l">Bolod (Poblacion)</span><span class="hb-t"><span class="hb-f sv" style="width:100.0%"></span></span><span class="hb-v">3,626</span></div><div class="hb"><span class="hb-l">Terraplin</span><span class="hb-t"><span class="hb-f sv" style="width:44.6%"></span></span><span class="hb-v">1,618</span></div><div class="hb"><span class="hb-l">Nazareno</span><span class="hb-t"><span class="hb-f sv" style="width:35.8%"></span></span><span class="hb-v">1,298</span></div><div class="hb"><span class="hb-l">Busing</span><span class="hb-t"><span class="hb-f sv" style="width:52.0%"></span></span><span class="hb-v">1,886</span></div><div class="hb"><span class="hb-l">San Pedro</span><span class="hb-t"><span class="hb-f us" style="width:89.1%"></span></span><span class="hb-v">3,232</span></div><div class="hb"><span class="hb-l">San Rafael</span><span class="hb-t"><span class="hb-f us" style="width:86.6%"></span></span><span class="hb-v">3,140</span></div><div class="hb"><span class="hb-l">Cueva</span><span class="hb-t"><span class="hb-f us" style="width:76.9%"></span></span><span class="hb-v">2,788</span></div><div class="hb"><span class="hb-l">Boca Chica</span><span class="hb-t"><span class="hb-f us" style="width:76.0%"></span></span><span class="hb-v">2,756</span></div><div class="hb"><span class="hb-l">Laurente</span><span class="hb-t"><span class="hb-f us" style="width:75.9%"></span></span><span class="hb-v">2,752</span></div><div class="hb"><span class="hb-l">Iniwaran</span><span class="hb-t"><span class="hb-f us" style="width:65.1%"></span></span><span class="hb-v">2,360</span></div><div class="hb"><span class="hb-l">Pinamasingan</span><span class="hb-t"><span class="hb-f us" style="width:55.3%"></span></span><span class="hb-v">2,005</span></div><div class="hb"><span class="hb-l">Mapanique</span><span class="hb-t"><span class="hb-f us" style="width:54.7%"></span></span><span class="hb-v">1,984</span></div><div class="hb"><span class="hb-l">Santa Cruz</span><span class="hb-t"><span class="hb-f us" style="width:53.6%"></span></span><span class="hb-v">1,945</span></div><div class="hb"><span class="hb-l">Malaking Ilog</span><span class="hb-t"><span class="hb-f us" style="width:52.7%"></span></span><span class="hb-v">1,911</span></div><div class="hb"><span class="hb-l">Mabini</span><span class="hb-t"><span class="hb-f us" style="width:49.1%"></span></span><span class="hb-v">1,779</span></div><div class="hb"><span class="hb-l">Quintina</span><span class="hb-t"><span class="hb-f us" style="width:45.1%"></span></span><span class="hb-v">1,637</span></div><div class="hb"><span class="hb-l">Ki-Romero</span><span class="hb-t"><span class="hb-f us" style="width:41.0%"></span></span><span class="hb-v">1,487</span></div><div class="hb"><span class="hb-l">Dangcalan</span><span class="hb-t"><span class="hb-f us" style="width:39.4%"></span></span><span class="hb-v">1,430</span></div><div class="hb"><span class="hb-l">Mabuhay</span><span class="hb-t"><span class="hb-f us" style="width:38.9%"></span></span><span class="hb-v">1,410</span></div><div class="hb"><span class="hb-l">San Jose</span><span class="hb-t"><span class="hb-f us" style="width:38.9%"></span></span><span class="hb-v">1,409</span></div><div class="hb"><span class="hb-l">Halabangbaybay</span><span class="hb-t"><span class="hb-f us" style="width:31.7%"></span></span><span class="hb-v">1,150</span></div><div class="hb"><span class="hb-l">Ki-Buaya</span><span class="hb-t"><span class="hb-f us" style="width:23.3%"></span></span><span class="hb-v">846</span></div></div>
+  <div class="stack">
+    <div class="legend-row"><i class="sw sv"></i> Served by Bolod hill today (field report)</div>
+    <div class="legend-row"><i class="sw us"></i> Not served</div>
+    <p class="lead">Four barangays around the poblacion and port are served: <b>8,428</b> people (19%).</p>
+    <p class="lead">The other eighteen, <b>36,021</b> people, sit behind the hills or beyond the towers' 3–4 km reach. The largest are San Pedro (3,232), San Rafael (3,140), Cueva (2,788), Boca Chica (2,756) and Laurente (2,752).</p>
+    <p class="note">Source: PSA 2020 Census via PhilAtlas. The 2024 POPCEN total is 44,641 (+0.4%).</p>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>3 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Model review</div><h2>What changed in this revision</h2></header><div class="body">
+<div class="three">
+  <div class="card"><h3>1. Laurente</h3><p>The first map showed Bolod reaching parts of Laurente. Field reports say it does not. The terrain confirms it: a spur rises about 41 m above the radio path, 3.7 km out.</p><p class="fix">Now: Laurente <b>1%</b> covered.</p></div>
+  <div class="card"><h3>2. Range</h3><p>The first model used a low-band, open-terrain budget and let signal run 10 km or more. Residents report usable signal ends at about 3–4 km.</p><p class="fix">Now: median land range <b>3.2 km</b> (most directions 2.8–3.45 km).</p></div>
+  <div class="card"><h3>3. The map itself</h3><p>The first maps used one flat colour over a grey relief, which read like a flood-depth map and hid how strong the signal is.</p><p class="fix">Now: graded RSRP classes from excellent to edge, on a contour basemap with 1–4 km range rings, land only.</p></div>
+</div>
+<p class="lead" style="margin-top:36px">All conclusions were recomputed. The direction of the finding is unchanged and stronger: the contractor's site adds <b>zero</b> unserved residents. Because each tower now reaches less, more towers are needed, and each must sit close to the people it serves.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>4 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Model review</div><h2>Calibrated to what residents receive from Bolod hill</h2></header><div class="body">
+<div class="two">
+  <div>
+    <table class="t"><thead><tr><th>Barangay</th><th class="r">km</th><th>Field report</th><th class="r">Usable</th><th class="r">Indoor</th><th>Check</th></tr></thead>
+    <tbody><tr><td>Bolod (Poblacion)</td><td class='r'>1.1</td><td>Served</td><td class='r'>87%</td><td class='r'>72%</td><td>✓ matches</td></tr><tr><td>Terraplin</td><td class='r'>1.4</td><td>Served</td><td class='r'>77%</td><td class='r'>47%</td><td>✓ matches</td></tr><tr><td>Nazareno</td><td class='r'>2.4</td><td>Served</td><td class='r'>55%</td><td class='r'>18%</td><td>✓ matches</td></tr><tr><td>Busing</td><td class='r'>3.2</td><td>Served</td><td class='r'>64%</td><td class='r'>9%</td><td>✓ matches</td></tr><tr><td>Boca Chica</td><td class='r'>3.8</td><td>Not served</td><td class='r'>17%</td><td class='r'>0%</td><td>✓ matches</td></tr><tr><td>San Rafael</td><td class='r'>4.7</td><td>Not served</td><td class='r'>0%</td><td class='r'>0%</td><td>✓ matches</td></tr><tr><td>Pinamasingan</td><td class='r'>5.3</td><td>Not served</td><td class='r'>0%</td><td class='r'>0%</td><td>✓ matches</td></tr><tr><td>Laurente</td><td class='r'>3.7</td><td>Not served</td><td class='r'>1%</td><td class='r'>0%</td><td>✓ matches</td></tr></tbody></table>
+    <p class="note">Usable = share of the barangay's settled area at RSRP ≥ −110 dBm; indoor = ≥ −100 dBm. Barangays beyond 5.5 km all predict 0%.</p>
+  </div>
+  <div class="stack">
+    <h3>The model</h3>
+    <ul>
+      <li>Terrain: SRTM 30 m elevation, radar spikes removed.</li>
+      <li>Path loss: COST-231 Hata (suburban) at 1800 MHz, plus terrain diffraction over the actual ridges (Deygout, ITU-R P.526).</li>
+      <li>Effective antenna height above each receiver, so hilltop sites get their real advantage.</li>
+      <li>Handset uplink fade beyond 3.5 km, matching the observed 3–4 km reach.</li>
+      <li>Thresholds: ≥ −110 dBm usable outdoors, ≥ −100 dBm indoors.</li>
+    </ul>
+    <p class="note">The free parameters were tuned so Bolod hill covers its four barangays and nothing else, ending at 3–4 km. A drive test should replace this tuning before final siting.</p>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>5 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Model review</div><h2>Existing Bolod hill towers: predicted signal strength</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_calibration_bolod.png" alt="">
+  <div class="side">
+    <p>Signal is strong around the poblacion and port, and fades to edge level by 3–4 km.</p>
+    <p>Busing and Nazareno sit in the outdoor-only and edge bands, consistent with "signal, but weak indoors".</p>
+    <p><b>Laurente</b> (2,752) is behind a spur and gets nothing. <b>Boca Chica</b> gets edge signal on its eastern side only.</p>
+    <p>Pinamasingan and San Rafael are beyond reach.</p>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>6 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Model review</div><h2>Reading the colours</h2></header><div class="body">
+<div class="classes">
+  <div class="cls" style="--c:#0b7a3b"><b>Excellent</b><span>≥ −80 dBm</span><p>Full speed indoors and out. Video calls work everywhere.</p></div>
+  <div class="cls" style="--c:#58b947"><b>Strong</b><span>−80 to −90</span><p>Reliable inside concrete houses. Good data.</p></div>
+  <div class="cls" style="--c:#f4d03f"><b>Good indoor</b><span>−90 to −100</span><p>Calls and messaging indoors; data slows in back rooms.</p></div>
+  <div class="cls" style="--c:#f08a24"><b>Outdoor only</b><span>−100 to −110</span><p>Works outside or by a window. Drops indoors. Counted as "usable".</p></div>
+  <div class="cls" style="--c:#d7301f"><b>Edge</b><span>−110 to −120</span><p>Signal bars appear but calls drop. Not counted as served.</p></div>
+  <div class="cls" style="--c:#e9e6d8"><b>No colour</b><span>&lt; −120</span><p>No service.</p></div>
+</div>
+<p class="lead" style="margin-top:40px">RSRP (Reference Signal Received Power) is the LTE signal level a phone measures. It is the figure the contractor's own propagation map should show, and what a drive test records.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>7 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Contractor&#x27;s site</div><h2>Where the contractor wants to build</h2></header><div class="body">
+<p class="lead">The application places the tower in deeper Barangay Bolod near the Pinamasingan Road. We did not have exact coordinates, so we tested three plausible spots on that road, 1–2 km south of the existing towers.</p>
+<table class="t big"><thead><tr><th>Scenario</th><th>Lat, Lon</th><th class="r">Ground</th><th class="r">Antenna top (40 m mast)</th><th class="r">From existing towers</th><th class="r">Area already covered by Bolod</th><th class="r">Unserved residents added</th><th class="r">Added at 30 / 45 / 60 m mast</th></tr></thead>
+<tbody><tr><td>CT-1</td><td class='mono'>13.1158, 122.9892</td><td class='r'>60 m</td><td class='r'>100 m</td><td class='r'>1.0 km</td><td class='r'>94%</td><td class='r'>0</td><td class='r'>0 / 0 / 0</td></tr><tr><td>CT-2</td><td class='mono'>13.1100, 122.9908</td><td class='r'>62 m</td><td class='r'>102 m</td><td class='r'>1.7 km</td><td class='r'>87%</td><td class='r'>0</td><td class='r'>0 / 0 / 0</td></tr><tr><td>CT-3</td><td class='mono'>13.1067, 122.9933</td><td class='r'>73 m</td><td class='r'>113 m</td><td class='r'>2.1 km</td><td class='r'>75%</td><td class='r'>0</td><td class='r'>0 / 0 / 15</td></tr><tr class="ref"><td>Bolod hill (existing)</td><td class="mono">13.1250, 122.9886</td><td class="r">108 m</td><td class="r">148 m</td><td class="r">—</td><td class="r">—</td><td class="r">—</td><td class="r">—</td></tr></tbody></table>
+<p class="lead" style="margin-top:28px">Whichever spot it is, and however tall the mast, the result is the same: <b>no unserved barangay gains usable service.</b></p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>8 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Contractor&#x27;s site</div><h2>A lower antenna next to a higher one sees nothing new</h2></header><div class="body">
+<div class="heights">
+  <div class="hrow"><div class="hl">Contractor CT-2<small>62 m ground + 40 m mast</small></div><div class="ht"><span class="hg" style="width:31.0%"></span><span class="hm" style="left:31.0%;width:20.0%;background:#e08214"></span></div><div class="hv">102 m</div></div>
+  <div class="hrow"><div class="hl">Existing Bolod hill<small>108 m ground + 40 m mast</small></div><div class="ht"><span class="hg" style="width:54.0%"></span><span class="hm" style="left:54.0%;width:20.0%;background:#2e7d32"></span></div><div class="hv">148 m</div></div>
+  <div class="hrow"><div class="hl">ALT-A Pinamasingan ridge<small>123 m ground + 40 m mast</small></div><div class="ht"><span class="hg" style="width:61.5%"></span><span class="hm" style="left:61.5%;width:20.0%;background:#1565c0"></span></div><div class="hv">163 m</div></div>
+  <div class="hrow"><div class="hl">ALT-C San Rafael–Santa Cruz<small>120 m ground + 40 m mast</small></div><div class="ht"><span class="hg" style="width:60.0%"></span><span class="hm" style="left:60.0%;width:20.0%;background:#ad1457"></span></div><div class="hv">160 m</div></div>
+  <div class="hrow"><div class="hl">ALT-D Malaking Ilog–Mapanique<small>153 m ground + 40 m mast</small></div><div class="ht"><span class="hg" style="width:76.4%"></span><span class="hm" style="left:76.4%;width:20.0%;background:#6a1b9a"></span></div><div class="hv">193 m</div></div>
+  <div class="haxis"><div></div><div><span>0</span><span>50</span><span>100</span><span>150</span><span>200 m above sea</span></div><div></div></div>
+</div>
+<p class="lead">Drawn to scale. The contractor's antennas would be 46 m below the antennas already on Bolod hill. Any ridge that blocks Bolod also blocks them. The ridge alternatives put antennas 12–45 m higher than Bolod's, and next to the people they serve.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>9 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Contractor&#x27;s site</div><h2>87% of its coverage is already covered</h2></header><div class="body">
+<img class="fig wide" src="../results/fig_contractor_overlap.png" alt="">
+<p class="lead">C shows the only land the contractor's site would add: 1.4 km² of slopes and gullies south of the towers, with no barangay centre in it. Unserved residents gained: <b>0</b>.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>10 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Contractor&#x27;s site</div><h2>The terrain between the contractor&#x27;s site and the unserved barangays</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_profiles.png" alt="">
+  <div class="side">
+    <p>Left: from the contractor site. Right: from the nearest proposed ridge site. Brown is the ground; the line is the direct radio path to a phone 1.5 m above ground.</p>
+    <p><b>Pinamasingan</b> (4.1 km): a spur next to the site blocks the path.</p>
+    <p><b>Laurente</b> (4.4 km): the path runs under 3 km of hills up to 115 m.</p>
+    <p><b>Santa Cruz</b> (5.4 km) and <b>San Pedro</b> (6.0 km): beyond reach and behind the 160 m central ridge.</p>
+    <p>From the ridge sites, each of these barangays has clear line of sight.</p>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>11 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>Same road, higher ground</h2></header><div class="body">
+<img class="fig wide" src="../results/fig_side_by_side.png" alt="">
+<p class="lead">ALT-A sits on the same Poblacion–Pinamasingan road, about 4.5 km past the contractor's spot, with a 723 m access spur. It covers Pinamasingan fully, and part of Cueva, for <b>+2,615</b> residents, against zero for the proposed spot.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>12 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>Five ridge sites the contractor can still drive to</h2></header><div class="body">
+<table class="t"><thead><tr><th>Site</th><th>Lat, Lon</th><th class="r">Ground</th><th class="r">Road spur</th><th class="r">Microwave to Bolod</th><th class="r">New residents (usable)</th><th class="r">(indoor)</th><th>Barangays lifted (share of settled area)</th></tr></thead>
+<tbody><tr><td><b>ALT-A</b> Pinamasingan ridge<br><span class='sm'>same Poblacion-Pinamasingan road, further out</span></td><td class='mono'>13.0875, 123.0317</td><td class='r'>123 m</td><td class='r'>723 m</td><td class='r'>6.3 km · 40 m</td><td class='r big'>2,615</td><td class='r'>1,947</td><td class='sm'>Pinamasingan 100%, Cueva 22%</td></tr><tr><td><b>ALT-B</b> Laurente-Nazareno ridge<br><span class='sm'>north-coast road to Laurente</span></td><td class='mono'>13.1414, 123.0061</td><td class='r'>72 m</td><td class='r'>971 m</td><td class='r'>2.6 km · 20 m</td><td class='r big'>2,293</td><td class='r'>1,914</td><td class='sm'>Laurente 85%, Nazareno 38%</td></tr><tr><td><b>ALT-C</b> San Rafael-Santa Cruz ridge<br><span class='sm'>west-coast road via San Rafael</span></td><td class='mono'>13.0697, 122.9636</td><td class='r'>120 m</td><td class='r'>43 m</td><td class='r'>6.7 km · 15 m</td><td class='r big'>4,089</td><td class='r'>2,401</td><td class='sm'>Santa Cruz 99%, San Rafael 62%, Mabuhay 14%</td></tr><tr><td><b>ALT-D</b> Malaking Ilog-Mapanique ridge<br><span class='sm'>inland Pinamasingan-San Pedro-Mapanique road</span></td><td class='mono'>13.0075, 123.0556</td><td class='r'>153 m</td><td class='r'>985 m</td><td class='r'>15.0 km · 35 m</td><td class='r big'>4,314</td><td class='r'>2,323</td><td class='sm'>Malaking Ilog 99%, Mapanique 64%, Ki-Romero 62%, San Jose 16%</td></tr><tr><td><b>ALT-E</b> Cueva ridge<br><span class='sm'>Poblacion-Quintina road via Cueva</span></td><td class='mono'>13.1017, 123.0578</td><td class='r'>62 m</td><td class='r'>410 m</td><td class='r'>7.9 km · 35 m</td><td class='r big'>2,813</td><td class='r'>2,069</td><td class='sm'>Cueva 91%, Pinamasingan 12%</td></tr><tr class="ct-row"><td><b>CT-2</b> Contractor, deeper Bolod</td><td class="mono">13.1100, 122.9908</td><td class="r">62 m</td><td class="r">0 m</td><td class="r">1.7 km</td><td class="r big">0</td><td class="r">0</td><td class="sm">none</td></tr></tbody></table>
+<p class="note">Screened from 93 hilltops within 1 km of a road. Each has a microwave path to Bolod clearing 60% of the first Fresnel zone (and 30% under sub-refraction) at 15 GHz, with masts of 45 m or less at both ends.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>13 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>ALT-A · Pinamasingan ridge</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_alt-a.png" alt="">
+  <div class="side">
+    <p class="lead">The direct answer to the contractor's road. It stays on the Poblacion–Pinamasingan road and climbs a 123 m ridge above Pinamasingan.</p>
+    <dl class="facts">
+      <dt>Location</dt><dd class="mono">13.0875 N, 123.0317 E</dd>
+      <dt>Ground / antenna top</dt><dd>123 m / 163 m above sea</dd>
+      <dt>Road access</dt><dd>723 m spur · same Poblacion-Pinamasingan road, further out</dd>
+      <dt>Backhaul</dt><dd>6.3 km to Bolod · 40 m masts at 15 GHz (45 m at 7 GHz)</dd>
+      <dt>New residents</dt><dd><b>2,615</b> usable · 1,947 indoor-grade</dd>
+      <dt>Overlap with Bolod</dt><dd>0%</dd>
+      <dt>Barangays lifted</dt><dd>Pinamasingan 100%, Cueva 22%</dd>
+    </dl>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>14 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>ALT-B · Laurente-Nazareno ridge</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_alt-b.png" alt="">
+  <div class="side">
+    <p class="lead">A 72 m knoll on the north-coast road between Nazareno and Laurente. It reaches Laurente, which Bolod cannot, with a short 2.6 km hop.</p>
+    <dl class="facts">
+      <dt>Location</dt><dd class="mono">13.1414 N, 123.0061 E</dd>
+      <dt>Ground / antenna top</dt><dd>72 m / 112 m above sea</dd>
+      <dt>Road access</dt><dd>971 m spur · north-coast road to Laurente</dd>
+      <dt>Backhaul</dt><dd>2.6 km to Bolod · 20 m masts at 15 GHz (20 m at 7 GHz)</dd>
+      <dt>New residents</dt><dd><b>2,293</b> usable · 1,914 indoor-grade</dd>
+      <dt>Overlap with Bolod</dt><dd>22%</dd>
+      <dt>Barangays lifted</dt><dd>Laurente 85%, Nazareno 38%</dd>
+    </dl>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>15 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>ALT-C · San Rafael-Santa Cruz ridge</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_alt-c.png" alt="">
+  <div class="side">
+    <p class="lead">On the west-coast road itself (43 m from it). It covers Santa Cruz and most of San Rafael, with the easiest backhaul on the island.</p>
+    <dl class="facts">
+      <dt>Location</dt><dd class="mono">13.0697 N, 122.9636 E</dd>
+      <dt>Ground / antenna top</dt><dd>120 m / 160 m above sea</dd>
+      <dt>Road access</dt><dd>43 m spur · west-coast road via San Rafael</dd>
+      <dt>Backhaul</dt><dd>6.7 km to Bolod · 15 m masts at 15 GHz (15 m at 7 GHz)</dd>
+      <dt>New residents</dt><dd><b>4,089</b> usable · 2,401 indoor-grade</dd>
+      <dt>Overlap with Bolod</dt><dd>0%</dd>
+      <dt>Barangays lifted</dt><dd>Santa Cruz 99%, San Rafael 62%, Mabuhay 14%</dd>
+    </dl>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>16 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>ALT-D · Malaking Ilog-Mapanique ridge</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_alt-d.png" alt="">
+  <div class="side">
+    <p class="lead">The best single site. A 153 m ridge above Malaking Ilog and Mapanique, serving the southern belt. Needs a 15 km link: specify 7/8 GHz.</p>
+    <dl class="facts">
+      <dt>Location</dt><dd class="mono">13.0075 N, 123.0556 E</dd>
+      <dt>Ground / antenna top</dt><dd>153 m / 193 m above sea</dd>
+      <dt>Road access</dt><dd>985 m spur · inland Pinamasingan-San Pedro-Mapanique road</dd>
+      <dt>Backhaul</dt><dd>15.0 km to Bolod · 35 m masts at 15 GHz (40 m at 7 GHz)</dd>
+      <dt>New residents</dt><dd><b>4,314</b> usable · 2,323 indoor-grade</dd>
+      <dt>Overlap with Bolod</dt><dd>0%</dd>
+      <dt>Barangays lifted</dt><dd>Malaking Ilog 99%, Mapanique 64%, Ki-Romero 62%, San Jose 16%</dd>
+    </dl>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>17 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>ALT-E · Cueva ridge</h2></header><div class="body">
+<div class="fig-row">
+  <img class="fig tall" src="../results/fig_alt-e.png" alt="">
+  <div class="side">
+    <p class="lead">A 62 m spur on the Poblacion–Quintina road above Cueva, the third-largest unserved barangay.</p>
+    <dl class="facts">
+      <dt>Location</dt><dd class="mono">13.1017 N, 123.0578 E</dd>
+      <dt>Ground / antenna top</dt><dd>62 m / 102 m above sea</dd>
+      <dt>Road access</dt><dd>410 m spur · Poblacion-Quintina road via Cueva</dd>
+      <dt>Backhaul</dt><dd>7.9 km to Bolod · 35 m masts at 15 GHz (35 m at 7 GHz)</dd>
+      <dt>New residents</dt><dd><b>2,813</b> usable · 2,069 indoor-grade</dd>
+      <dt>Overlap with Bolod</dt><dd>0%</dd>
+      <dt>Barangays lifted</dt><dd>Cueva 91%, Pinamasingan 12%</dd>
+    </dl>
+  </div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>18 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Better compromise</div><h2>Every proposed site has a clear microwave link</h2></header><div class="body">
+<img class="fig wide" src="../results/fig_mw_profiles.png" alt="" style="max-height:740px">
+<p class="note">Shaded band: 60% of the first Fresnel zone at 15 GHz, the standard clearance for a licensed link. Masts are the minimum equal height at both ends. Bottom row: build-out sites that are not among ALT-A to ALT-E. N3 and N7 hop via N1 rather than directly to Bolod.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>19 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Network plan</div><h2>One tower can&#x27;t cover a 3–4 km-reach island. A plan can.</h2></header><div class="body">
+<img class="fig wide" src="../results/fig_network.png" alt="">
+<p class="lead">Left: Bolod plus the contractor's site. Right: Bolod plus eight road-accessible hill sites chosen one at a time for the most new residents. Blue lines are the microwave links.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>20 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Network plan</div><h2>Build-out order: residents with usable signal</h2></header><div class="body">
+<img class="fig" src="../results/fig_buildout.png" alt="" style="max-height:330px;width:auto;align-self:center">
+<div>
+  <table class="t sm tight"><thead><tr><th>#</th><th>Site</th><th>Lat, Lon</th><th class="r">Ground</th><th class="r">Spur</th><th>Backhaul via</th><th class="r">Adds</th><th class="r">Total</th></tr></thead><tbody><tr><td><b>N1</b></td><td>Malaking Ilog-Mapanique ridge (ALT-D)</td><td class='mono'>13.0075, 123.0556</td><td class='r'>153 m</td><td class='r'>985 m</td><td>BOLOD · 15.0 km</td><td class='r'>+4,314</td><td class='r'>13,241 (30%)</td></tr><tr><td><b>N2</b></td><td>San Rafael-Santa Cruz ridge (ALT-C)</td><td class='mono'>13.0697, 122.9636</td><td class='r'>120 m</td><td class='r'>43 m</td><td>BOLOD · 6.7 km</td><td class='r'>+4,089</td><td class='r'>17,330 (39%)</td></tr><tr><td><b>N3</b></td><td>San Pedro hill</td><td class='mono'>13.0542, 123.0025</td><td class='r'>135 m</td><td class='r'>206 m</td><td>N1 · 7.8 km</td><td class='r'>+3,232</td><td class='r'>20,562 (46%)</td></tr><tr><td><b>N4</b></td><td>Cueva ridge (ALT-E)</td><td class='mono'>13.1017, 123.0578</td><td class='r'>62 m</td><td class='r'>410 m</td><td>BOLOD · 7.9 km</td><td class='r'>+2,813</td><td class='r'>23,375 (53%)</td></tr><tr><td><b>N5</b></td><td>Boca Chica hill</td><td class='mono'>13.1231, 122.9600</td><td class='r'>64 m</td><td class='r'>358 m</td><td>BOLOD · 3.1 km</td><td class='r'>+2,297</td><td class='r'>25,672 (58%)</td></tr><tr><td><b>N6</b></td><td>Laurente-Nazareno ridge (ALT-B)</td><td class='mono'>13.1414, 123.0061</td><td class='r'>72 m</td><td class='r'>971 m</td><td>BOLOD · 2.6 km</td><td class='r'>+2,293</td><td class='r'>27,965 (63%)</td></tr><tr><td><b>N7</b></td><td>Mabini hill</td><td class='mono'>13.0125, 123.0022</td><td class='r'>100 m</td><td class='r'>707 m</td><td>N1 · 5.8 km</td><td class='r'>+1,841</td><td class='r'>29,806 (67%)</td></tr><tr><td><b>N8</b></td><td>Pinamasingan ridge (ALT-A)</td><td class='mono'>13.0875, 123.0317</td><td class='r'>123 m</td><td class='r'>723 m</td><td>BOLOD · 6.3 km</td><td class='r'>+1,773</td><td class='r'>31,579 (71%)</td></tr></tbody></table>
+</div>
+<p class="lead">Phase 1 (N1 + N2) more than doubles coverage: 20% → 39%. The full eight sites reach 71%. Bolod plus the contractor's site stays at 20%.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>21 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Decision matrix</div><h2>Four metrics, every option</h2></header><div class="body">
+<table class="t matrix"><thead><tr><th>Site</th><th>Population covered<br><span class="sm">new residents, of 36,021</span></th><th>Backhaul to Bolod</th><th>Power / road access</th><th>Commercial viability<br><span class="sm">indicative revenue</span></th><th>Verdict</th></tr></thead>
+<tbody><tr class='ct-row'><td><b>CT</b> Contractor, deeper Bolod</td><td><span class="pips"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span> 0 new</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> 1–2 km</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> on the road, near the grid</td><td><span class="pips"><i class="on"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i></span> no new subscribers</td><td class='bad'>Reject as a coverage project</td></tr><tr><td><b>ALT-A</b> Pinamasingan ridge</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 2,615</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span> 6.3 km, 40 m</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 723 m spur</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> ₱1.6–2.4 M/yr</td><td>Minimum compromise on the contractor's road</td></tr><tr><td><b>ALT-B</b> Laurente-Nazareno ridge</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 2,293</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> 2.6 km, 20 m</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 971 m spur</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> ₱1.4–2.1 M/yr</td><td>Laurente fix, cheap hop</td></tr><tr><td><b>ALT-C</b> San Rafael-Santa Cruz ridge</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> 4,089</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> 6.7 km, 15 m</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> 43 m spur</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> ₱2.5–3.7 M/yr</td><td>Phase 1</td></tr><tr><td><b>ALT-D</b> Malaking Ilog-Mapanique ridge</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span> 4,314</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 15.0 km, 35 m</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 985 m spur</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span> ₱2.6–3.9 M/yr</td><td>Phase 1, best single site</td></tr><tr><td><b>ALT-E</b> Cueva ridge</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> 2,813</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span> 7.9 km, 35 m</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i></span> 410 m spur</td><td><span class="pips"><i class="on"></i><i class="on"></i><i class="on"></i><i class=""></i><i class=""></i></span> ₱1.7–2.5 M/yr</td><td>Phase 2</td></tr></tbody></table>
+<p class="note">Scores 1 (poor) to 5 (excellent). Revenue assumes ₱600–900 per newly covered resident per year (rural Bicol prepaid mix); replace with the operator's own figures. A 40 m greenfield with microwave typically costs ₱10–15 M, plus ₱3–6 M for a hilltop access spur and solar-hybrid power.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>22 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Decision matrix</div><h2>The commercial picture, read honestly</h2></header><div class="body">
+<div class="three">
+  <div class="card"><h3>Contractor's site</h3><p>No new subscribers. All revenue is traffic moved off Bolod. That justifies a capacity upgrade, which co-location on the existing Bolod towers delivers without a new structure.</p></div>
+  <div class="card"><h3>Single ridge site</h3><p>About 4,314 new residents at best: roughly ₱2.6–3.9 M a year against ₱13–21 M capex. Payback is about 4–7 years, slower than an urban site but positive, and it opens a captive market.</p></div>
+  <div class="card"><h3>Shared network</h3><p>With a 3–4 km reach, full coverage needs several sites. Multi-operator sharing, DICT common-tower and connectivity programmes, and LGU help with land and access roads are what make sites N3–N8 viable.</p></div>
+</div>
+<p class="lead" style="margin-top:36px">The council's leverage is simple: offer fast permitting, land and road help for ridge sites, and ask for nothing new for a site that adds no one.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>23 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Hearing strategy</div><h2>Check the council&#x27;s legal footing first</h2></header><div class="body">
+<div class="callout">
+  <p><b>Executive Order No. 32 (s. 2023)</b> lists Sanggunian resolutions among the requirements that are no longer prerequisites for shared telecom tower permits. <b>Revised JMC No. 01 s. 2021</b> bars LGUs from requiring documents beyond its list.</p>
+</div>
+<div class="two" style="margin-top:32px">
+  <div><h3>Before the hearing</h3><ul class="big">
+    <li>Ask the Municipal Legal Officer and DILG provincial office whether this RONO is legally required, or a courtesy endorsement the contractor is seeking.</li>
+    <li>If a courtesy: write the conditions into a Memorandum of Agreement the contractor signs.</li></ul></div>
+  <div><h3>Levers the LGU still holds</h3><ul class="big">
+    <li>Municipal and barangay land for ridge sites, and right-of-way for access spurs.</li>
+    <li>Building-permit technical review, zoning and locational clearance.</li>
+    <li>Fast one-stop-shop processing under EO 32.</li>
+    <li>A council resolution of findings to DICT and NTC.</li></ul></div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>24 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Hearing strategy</div><h2>Five questions for the councilors to ask</h2></header><div class="body"><ol class="qs"><li><div class="qn">Q1</div><div><p class="qa">"Show us your RSRP propagation map, for your site and for the existing Bolod towers, and the difference."</p><p class="qw">Ask for −100 and −110 dBm contours, the model and terrain data, antenna height, azimuth, tilt and power. Then: which barangays, and how many residents, gain service they do not have today?</p></div></li><li><div class="qn">Q2</div><div><p class="qa">"Your antennas will be about 46 m lower than the ones already on Bolod hill. Name one unserved barangay you will reach that Bolod cannot."</p><p class="qw">Ask for the terrain profile to Pinamasingan, Laurente or San Rafael. Ask whether they evaluated the Pinamasingan ridge on the same road, and for their site-search ring.</p></div></li><li><div class="qn">Q3</div><div><p class="qa">"Which operator will be on this tower, and why not co-locate on the existing Bolod towers?"</p><p class="qw">If the purpose is a new operator or more capacity, DICT&#x27;s co-location policy points to the existing structures.</p></div></li><li><div class="qn">Q4</div><div><p class="qa">"What is your written commitment to the 18 unserved barangays, with sites and dates?"</p><p class="qw">Ask for a rollout schedule with coordinates and on-air dates, and a drive test shared with the council within 60 days of switching on.</p></div></li><li><div class="qn">Q5</div><div><p class="qa">"Which frequency band will the new tower use, and will it stay up when the grid is down or a typhoon hits?"</p><p class="qw">A sub-GHz layer (700/850 MHz) reaches further than the 3–4 km seen today. Ask for battery hours, generator or solar backup, the NSCP wind rating and typhoon restoration time.</p></div></li></ol></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>25 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Hearing strategy</div><h2>Conditions before granting no objection</h2></header><div class="body">
+<div class="four">
+  <div class="cond"><h3>Coverage extension</h3><ul>
+    <li>The site must give RSRP ≥ −100 dBm to at least [2,000] residents of unserved barangays not reached from Bolod. ALT-A to ALT-E pre-qualify, subject to survey.</li>
+    <li>If they insist on deeper Bolod: capacity only, tied to a ridge site on air within [12–18] months, or the endorsement lapses.</li>
+    <li>For a new tenant or capacity: show first why co-location on Bolod is impossible.</li></ul></div>
+  <div class="cond"><h3>Evidence first</h3><ul>
+    <li>Propagation study (Longley-Rice or ITU-R P.1812, terrain ≤ 30 m) for the site, Bolod and the difference.</li>
+    <li>Band plan, including a sub-GHz layer.</li>
+    <li>Microwave or fibre plan, ≥ 99.99% availability for rain zone P.</li>
+    <li>Power plan with ≥ 8 h battery; NSCP 2015 structure; EMF compliance.</li></ul></div>
+  <div class="cond"><h3>After construction</h3><ul>
+    <li>Drive test of all 22 barangays within 60 days, with raw logs to the Sanggunian.</li>
+    <li>Annual coverage report for three years.</li>
+    <li>Open access to other operators on published terms.</li>
+    <li>Restoration ≤ 72 h after typhoon damage.</li>
+    <li>Lapses if construction has not started within 12 months.</li></ul></div>
+  <div class="cond"><h3>What the LGU offers</h3><ul>
+    <li>Priority one-stop-shop processing.</li>
+    <li>Help finding municipal or barangay land on the chosen ridge, and spur right-of-way.</li>
+    <li>Power-line coordination along the Pinamasingan and Poblacion–Quintina roads.</li>
+    <li>A joint letter to DICT supporting the ridge sites.</li></ul></div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>26 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Hearing strategy</div><h2>Showing the proof in the session hall</h2></header><div class="body">
+<div class="three">
+  <div class="card"><h3>Google Earth Pro</h3><ol>
+    <li>Open <span class="mono">results/san_pascual_review.kmz</span>.</li>
+    <li>Tools → Options → 3D View: elevation exaggeration 2.</li>
+    <li>Toggle "BOLOD" + "CT-2" coverage, then "BOLOD" + "ALT-A".</li>
+    <li>For an independent check: placemark at a site, altitude 40 m relative to ground, right-click → Show Viewshed.</li>
+    <li>Draw a path CT-2 → Pinamasingan → Show Elevation Profile to show the spur.</li></ol></div>
+  <div class="card"><h3>HeyWhatsThat</h3><ol>
+    <li>New panorama at each site, 40 m above ground, made before the hearing.</li>
+    <li>Show the two visibility maps in side-by-side browser tabs.</li>
+    <li>Path Profiler, Bolod → ALT-D, shows the microwave link clears.</li></ol></div>
+  <div class="card"><h3>CloudRF</h3><ol>
+    <li>Area coverage at 1800 MHz (and 758 MHz for a low-band layer), 46 dBm, 17.5 dBi, 40 m mast, 1.5 m receiver.</li>
+    <li>Model Longley-Rice, rural vegetated, 6 km radius.</li>
+    <li>Legend at −80 / −90 / −100 / −110 / −120 dBm, the classes on these slides.</li>
+    <li>Export KMZ into Google Earth. This is the same map the contractor should be producing.</li></ol></div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>27 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Method</div><h2>What this study can and cannot tell you</h2></header><div class="body">
+<div class="two">
+  <div><h3>Solid</h3><ul class="big">
+    <li>The relative comparison. The same model and terrain apply to every site, so "contractor adds nothing, ridges add thousands" holds even if absolute ranges shift.</li>
+    <li>Terrain blocking: the ridges are real and visible in Google Earth's own elevation profile.</li>
+    <li>Calibrated to the council's field facts: four served barangays, no Laurente, 3–4 km reach.</li></ul></div>
+  <div><h3>To confirm</h3><ul class="big">
+    <li>The contractor's exact coordinates, and the surveyed Bolod tower positions.</li>
+    <li>Actual road and power-line alignments; ours are inferred from terrain.</li>
+    <li>A drive test to replace the calibration with measurements.</li>
+    <li>A site walk at each ridge: SRTM is ±5–10 m, and land ownership matters.</li>
+    <li>The operator's band, power and antenna plan, which sets the real reach.</li></ul></div>
+</div>
+<p class="note">Analysis code, data, KMZ and every figure: project repository, folders analysis/, data/, results/. Re-run with real coordinates by editing the constants at the top of analysis/contractor_review.py.</p></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>28 / 29</span></footer></section>
+<section class="slide "><header><div class="eyebrow">Next steps</div><h2>Before and after the hearing</h2></header><div class="body">
+<div class="two">
+  <div><h3>Before</h3><ol class="big">
+    <li>Legal Officer opinion on the RONO's status under EO 32.</li>
+    <li>Request the contractor's exact coordinates and propagation map in writing.</li>
+    <li>Short drive test or phone survey: Busing, Nazareno, Laurente, Boca Chica, Pinamasingan.</li>
+    <li>Identify municipal or barangay land near ALT-C and ALT-D.</li></ol></div>
+  <div><h3>At and after</h3><ol class="big">
+    <li>Present slides 2, 10, 11, 12 and 20; ask the five questions.</li>
+    <li>Offer the conditions and the LGU's help as a package.</li>
+    <li>Re-run this analysis on the contractor's own coordinates and data.</li>
+    <li>Track on-air dates and the drive-test report.</li></ol></div>
+</div></div><footer><span>San Pascual Cell-Site Review · Sangguniang Bayan · Rev. 2, October 2026</span><span>29 / 29</span></footer></section>
+</body></html>

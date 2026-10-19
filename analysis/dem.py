@@ -71,6 +71,14 @@ class DEM:
                 + (z[r0, c0 + 1] * (1 - fr) + z[r0 + 1, c0 + 1] * fr) * fc)
 
 
+    def elev_nn(self, lat, lon):
+        """Nearest-cell elevation: direction-independent profile sampling."""
+        r, c = self.rc(np.asarray(lat, float), np.asarray(lon, float))
+        r = np.clip(np.rint(r).astype(int), 0, self.z.shape[0] - 1)
+        c = np.clip(np.rint(c).astype(int), 0, self.z.shape[1] - 1)
+        return self.z[r, c]
+
+
 def dest(lat, lon, bearing_deg, dist_m):
     """Flat-earth destination point; fine for paths < 30 km at 13N."""
     b = np.radians(bearing_deg)
